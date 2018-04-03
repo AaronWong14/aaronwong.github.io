@@ -1,0 +1,24 @@
+.border-primary{
+	margin-left: 24vw;
+	margin-right: 24vw;
+	margin-bottom: 24vh;
+	margin-top: 24vh;
+	/*text-align: center;*/
+	padding: 2em;
+	
+	
+}
+
+h1{
+	margin-left: 2vw;
+	font-family: 'Roboto', sans-serif;
+	font-size: 3em;
+}
+
+h3{
+	color:black;
+	font-size:3em;
+}
+.border{
+	border-width: 5px !important;
+}

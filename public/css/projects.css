@@ -1,0 +1,26 @@
+.border-info{
+	margin-left: 8vw;
+	margin-right: 8vw;
+	margin-bottom: 5vh;
+	margin-top: 2vh;
+	text-align: center;	
+}
+
+.border{
+	border-width: 5px !important;
+}
+
+
+p{
+	text-align: center;
+	font-size: 2em;
+
+}
+h3{
+	font-size:3em;
+	color: black;
+}
+
+body {
+    background-image: url("../img/whiteBackground.jpg");
+}
