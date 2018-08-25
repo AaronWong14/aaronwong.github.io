@@ -1,0 +1,14 @@
+.border-info{
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-bottom: 5vh;
+	margin-top: 2vh;
+	text-align: center;	
+	border-color: #0e0487 !important;
+}
+
+
+
+body {
+    background-image: url("../img/temp.jpg");
+}

@@ -1,9 +1,750 @@
-.intro {
-font-size:36;
-margin-top: 50px;
-margin-left: 100px;
-color: #3371FF}
+/*
+    DEMO STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-.contentInfo{
-	
+body{
+    overflow-x: hidden;
+    background-color: #99E1D9;
+    color: black;
+}
+
+#content {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+h1{
+    font-size: 8vw;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+/* ---------------------------------------------------
+    NAVBAR STYLE AND EXPANSION
+----------------------------------------------------- */
+
+#navbar {
+    height: 5rem;
+    width: 100vw;
+    position: fixed;      
+    z-index: 999;
+    background: #32292F;
+    color: #fff;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    margin-left: 0rem;
+    box-shadow: 0px 0px 30px 10px #32292F;
+   
+
+}
+
+#navbar .brand-logo {
+	margin-left: 1vw;
+}
+
+
+#navbar.active {
+    margin-top: -5rem;        
+}
+
+i.right {
+    float: right;
+    margin-left: 1vw;
+}
+
+nav ul a:hover {
+    background-color: rgba(0,0,0,0.5);
+    height: 5rem;
+}
+
+ul li a {
+    font-size: 1.5em !important;
+    padding-left: 4vw !important;
+    background: #32292F;
+}
+nav ul a {   
+    transition: background-color 1s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    padding: 0 4vw;
+    cursor: pointer;
+    height: 5rem;
+}
+#navbar .icon{	
+	font-size: 2rem;
+}
+
+#navbarCollapse {
+	height: -10rem;
+    position: fixed;
+    left: 0;
+    /*top: 2%;*/
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    background: #32292F;
+    border: 1px solid transparent;
+    border-radius: 0rem .5rem .5rem 0rem;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0rem;
+    z-index: 3;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+}
+
+#navbarCollapse:hover {
+    cursor: pointer;
+    background: #32292F;
+    color: white;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    box-shadow: 0px 0px 30px 10px #32292F;
+}
+
+#navbarCollapse:focus{
+    outline-style: none;
+}
+
+#navbarCollapse.active {
+    top: 5rem;    
+    cursor: pointer;
+    background-color: #32292F;
+    color: white;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    z-index: 2;
+}
+
+#navbarCollapse.active:hover {
+    cursor: pointer;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    box-shadow: 0px 0px 30px 10px #32292F;
+}
+
+.advanceButtons {
+    margin: 2% 0%;
+    padding: auto 15%;
+    cursor: pointer;
+    background-color: #32292F;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+}
+
+.advanceButtons:hover {
+    box-shadow: 0px 0px 30px 10px background: #32292F;
+}
+
+.advanceButtons:focus{
+    outline-style: none;
+}
+
+.advanceButtons span{
+    font-size: 4rem;
+}
+
+.advanceButtons h2 {
+    font-size: 2.5rem;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {    
+    width: 20vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120vh;
+    z-index: 999;
+    background: #32292F;
+    color: #fff;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    margin-left: 0rem;
+}
+
+#sidebar.active {    
+    margin-left: -20rem;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #32292F;
+}
+
+.sidebar-header p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#sidebar ul.components {
+    padding: 10px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.52em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #32292F;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #32292F;
+}
+
+#sidebar h2{
+	font-size: 3em;
+}
+
+/*ul li a {
+    font-size: 1.55em !important;
+    padding-left: 60px !important;
+    background: #32292F;
+}*/
+
+.icon span {
+    font-size: 1.5rem;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+.menuTop{
+    top: 0;
+    left: 0;
+}
+
+.fixedBackImg {
+    min-width: 100%;
+    min-height: 30rem;
+    background-size: 500%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#spaceBackground {
+    background-position: 20% 0% 0% 0%;
+    background-size: 120%;
+    background-image: url('../img/mainPageWallPaper.jpg');
+    background-blend-mode: lighten;
+}
+
+#menu{
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.imageShadow:before
+{
+    display:block;
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    -moz-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+    -webkit-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+    box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+}
+
+.parallax{
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*margin-top: 5%;*/
+    padding: 15% 7.5%;
+}
+
+/*#parallax1, #parallax2, #parallax2-1, #parallax3, #parallax4, #parallax5, #parallax6, #parallax7 {
+    position: relative;
+    margin-top: 5%;
+    padding: 15% 7.5%;
+}
+*/
+.shadeOutline{
+    background-color: rgba(255,255,255,0.9);
+    color: black;
+    box-shadow: 0px 0px 100px 50px rgba(255,255,255,0.5);
+}
+
+#content {
+    width: 100%;
+    padding: 0% 7.5%;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+.testHeader{
+    /* border: solid black 1px; */
+    width: 100%;
+}
+
+#sidebarCollapse {
+    position: fixed;
+    left: 0;
+    top: 2%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    background: #32292F;
+    border: 1px solid transparent;
+    border-radius: 0rem .5rem .5rem 0rem;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0rem;
+    z-index: 3;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+}
+
+#sidebarCollapse:hover {
+    cursor: pointer;
+    background: #32292F;
+    color: white;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    box-shadow: 0px 0px 30px 10px #32292F;
+}
+
+#sidebarCollapse:focus{
+    outline-style: none;
+}
+
+#sidebarCollapse.active {
+    top: 0%;
+    margin-left: 20rem;
+    cursor: pointer;
+    background-color: #32292F;
+    color: white;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    z-index: 2;
+}
+
+#sidebarCollapse.active:hover {
+    cursor: pointer;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    box-shadow: 0px 0px 30px 10px #32292F;
+}
+
+.advanceButtons {
+    margin: 2% 0%;
+    padding: auto 15%;
+    cursor: pointer;
+    background-color: #32292F;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+}
+
+.advanceButtons:hover {
+    box-shadow: 0px 0px 30px 10px background: #32292F;
+}
+
+.advanceButtons:focus{
+    outline-style: none;
+}
+
+.advanceButtons span{
+    font-size: 4rem;
+}
+
+.advanceButtons h2 {
+    font-size: 2.5rem;
+}
+
+#title, .bodyText1 {
+    padding: 2% 3.5%;
+    transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
+    background-color: rgb(112, 171, 175, 0.85);
+    box-shadow: 0px 0px 100px 50px rgba(112, 171, 175, 0.85);
+}
+
+#title{
+    /* -webkit-text-stroke: 1.25px black; */
+}
+
+.bodyText1 {
+    /* display: table; */
+    text-align: center;
+}
+
+.text{
+    width: 100%;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+}
+
+.intro{
+    /* border: solid black 1px; */
+    display: flex;
+    align-items: start;
+}
+
+.introTitle{
+	display: block;
+	font-size: 7.5vw;
+  text-align: center;
+  justify-content: center;
+}
+
+#introTitle, #prototype1, #feedIterating, #prototype2, #wireframes {
+    font-size: 7.5vw;
+    text-align: center;
+}
+
+#needRes {
+    font-size: 6.5vw;
+}
+
+#results {
+    font-size: 5.5vw;
+}
+
+#introTitle{
+    display: block;
+}
+
+#introText{
+    padding: 0rem 1rem;
+    font-size: 10vw;
+}
+
+#introText p {
+    font-size: 2.2vw;
+    text-align: center;
+}
+
+.header, .intro, #introText, #introTitle{
+    justify-content: center;
+}
+
+.doItEarly{
+    justify-content: center;
+    /*padding: 2% 2%;*/
+}
+
+.doItEarlyIntro{
+	/*min-height: 100vh;*/
+	height: 100vh;
+}
+
+.doItEarly p{
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+.doItEarly h1{
+	font-size: 4rem;
+	text-align: center;
+}
+
+.doItEarly li{
+    font-size: 1.1rem;
+}
+
+#theme b {
+    font-size: 1.5rem;
+}
+
+#sportingEvents p{
+    font-size: 2rem;
+}
+
+
+#parallax1{
+	background-size: 100%;    	
+}
+
+#parallax2{
+	background-image: url('../img/project.jpg');
+    background-size: 100%;    
+}
+
+/* Do It Early Parallax */
+#parallax2-1 {
+	background-size: 100%;   
+	min-height: 110vh;
+	background-image: url('../img/doItEarlySummary.jpg');	
+}
+
+#parallax2-2 {	
+	background-size: 90%;
+	align-content: center;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	background-image: url('../img/doItEarlyAbleton.png');	
+}
+
+.abletonText p{
+	margin-top: .9rem;
+	font-size: 1.25rem;
+	margin-right: 1rem;
+	margin-left: 2rem;
+	position: relative;
+}
+
+
+#parallax3{
+    min-height: 40rem;
+    background-size: 120%;
+    background-image: url('../images/prototype1.PNG');
+}
+
+#closingStatement p {
+    font-size: 2.5rem;
+}
+
+#parallax4{
+    min-height: 40rem;
+    background-size: 100%;
+    background-image: url('../images/feedback1.png');
+}
+
+#parallax5{
+    min-height: 40rem;
+    background-size: 120%;
+    background-image: url('../images/fbEvent.PNG');
+}
+
+#parallax6{
+    min-height: 40rem;
+    background-size: 90%;
+    background-image: url('../images/largeSketch.JPG');
+}
+
+#wireframes {
+    font-size: 6.5vw;
+}
+
+/* #largeSketch, #largeSketch2, #largeSketch3 {
+    transform: rotate(90deg);
+} */
+
+#parallax7 {
+    min-height: 40rem;
+    background-size: 90%;
+    background-image: url('../images/resultsFeedback.png');
+}
+
+.link{
+	color: blue;
+	text-decoration: underline;
+}
+
+/*Project dropbar*/
+#projectDropdown{
+	padding-left: 0;
+}
+
+ul{
+	list-style-type: none;	
+}
+
+
+/* ---------------------------------------------------
+   	SLIDESHOWS
+----------------------------------------------------- */
+/** {
+	box-sizing: border-box
+}*/
+
+.mySlides {
+    display: block;
+    max-height: 71vh;
+    min-height: 71vh;    
+}
+
+.mySlides p{
+	font-size: 1.1rem;
+}
+
+img {
+	vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+ /* max-width: 1000px;*/
+  position: relative;
+  margin: auto;
+  margin-right: 5vw;
+  margin-left: 4vw;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  margin-top: 65%;
+  width: auto;
+  /*padding: 16px;
+  margin-top: -22px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.slideText {
+  /*color: #f2f2f2;*/
+  font-size: 2vw;
+  padding: .5vw;
+  /*position: absolute;*/
+  /*bottom: 8px;*/
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1vw;
+  padding: .25vw;
+  position: absolute;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:active, .dot:hover {
+  background-color: #000;
+}
+
+.slideShowDots{
+	/*position: fixed;*/
+	/*margin-bottom: 10vh;*/   
+	/*margin-top: -10vh;*/
+	margin-left: -0.5vw;
+}
+
+.slideShowDots .active{
+	background-color: #000;
+	text-align:center;
+	align-content: left;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-fill-mode: forwards; /*prevents from fading away*/
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+/*@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}*/
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media only screen and (max-width: 1000px) {
+    #introText{
+        font-size: 25vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .col {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .intro{
+        padding: 1rem 0rem;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    .col {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .fixedBackImg {
+        background-size: 2000%;
+    }
+
+    .intro{
+        padding: 1rem 0rem;
+    }
+
+    .col {
+        display: block;
+        width: 100%;
+    }
 }

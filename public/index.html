@@ -2,77 +2,395 @@
 <html lang="en">
 
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Aaron Wong</title>
+    <!-- Latest Version of Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <meta name="description" content="Portfolio Website">
-  <meta name="author" content="Aaron Wong"> 
-  <!-- API CSS -->   
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">    
-  <link href="/css/bootstrap-reboot.css" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/skeleton.css" rel="stylesheet">  
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!--My CSS-->
-  <link href="css/min.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
+    <!-- Font Awesome Icons & CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/min.css">
+
    
-  
+    <!-- Title of Website -->
+    <title>Aaron Wong</title>
   </head>
 
-<body> 
+  <body>
+  <div class="wrapper">
+    <!--Sidebar Holder -->
+    <!-- <nav class="active" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Navigation Menu </h2>
+        <p>Click below to navigate across the website.</p>
+      </div>
+      actual nav contents
+      <ul class="list-unstyled components">
+        <li class="listItem" id="home">
+          <a href="#title">
+            <div class="row">
+              <div class="icon col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 justify-content-right">
+                <span class="fas fa-arrow-up"></span>
+              </div>
+               <div class="icon col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 justify-content-left">
+                  Return to Top
+              </div>
+            </div>
+          </a>
+        </li>
+         <li class="listItem" id="intro">
+            <a href="#AboutMe">
+                <div class="row">
+                    <div class="icon col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 justify-content-right">
+                      <span class="fas fa-clipboard-list"></span>
+                    </div>
+                    <div class="icon col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 justify-content-left">
+                        About Me
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="listItem">
+          <a href="#needRes">            
+            <div class="row">                
+              <div class="icon col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 justify-content-right">
+                  <span class="fas fa-search"></span>
+              </div>
+              <div class="icon col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 justify-content-left">
+                  Projects    
+              </div>
+              <div class="icon col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 justify-content-left"> 
+                <ul id="projectDropdown">Icon toggle          
+                  <i class="fa fa-forward" aria-hidden="true"></i>    
+                </ul>                   
+              </div>                     
+            </div>           
+           </a>
+          <ul id="projectDropdownContents" style="display:none">                              
+            <li><a href="#doItEarly">DoItEarly</a></li>
+            <li><a href="#nba">NBA</a></li>
+            <li><a href="#pantry">Pantry</a></li>
+            <li><a href="#ucsd">UCSD</a></li>                               
+          </ul>                
+         
+        </li>
+        <li class="listItem">
+            <a href="#prototype1">
+                <div class="row">
+                    <div class="icon col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 justify-content-right">
+                        <span class="fas fa-edit"></span>
+                    </div>
+                    <div class="icon col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 justify-content-left">
+                        Interests
+                    </div>
+                </div>
+            </a>
+        </li>
+       
+      </ul>
+    </nav> -->
 
+    <nav class ="active row" id ="navbar">
+      <div id="navbar" class="nav-wrapper">
+        <li class="brand-logo"><i class="material-icons left icon">person</i>Aaron Wong</li>
+        <ul class="right hide-on-med-and-down row">
+          <li id="home"><a href="#title"><i class="material-icons left icon">home</i>Home</a></li>
+          <li id="intro"><a href="#aboutMe"><i class="material-icons left icon">person_pin_circle</i>About Me</a></li>
+          <!-- Dropdown Trigger -->
+          <li><a class="dropdown-trigger" data-target="dropdown1"><i class="material-icons left icon">phonelink</i>Projects<i class="material-icons right icon">arrow_drop_down</i></a></li>          
+          <li id="intro"><a href="#interests"><i class="material-icons left icon">polymer</i>Interests</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<div class="header">
-  <div>
-    <h1>Aaron Wong</h1>
-  </div> 
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content dropdown-menu">
+      <li><a href="#projects">Intro</a></li>
+      <li class="divider"></li>
+      <li><a href="#doItEarly">DoItEarly</a></li>
+      <li><a href="#nba">NBA</a></li>
+      <li><a href="#pantry">Pantry</a></li>
+      <li><a href="#ucsd">UCSD</a></li>  
+    </ul>
 
-  <div class="row justify-content-between">
+    
+   <!--  <nav class ="active row" id="navbar">      
+      <ul class="nav navbar-nav">       
+        <li id="home"><a href="#title">Home</a></li>
+        <li id="intro"><a href="#aboutMe">About Me</a></li>
+        <li class="dropdown" id="projects">
+          <a class="nav-link dropdown-toggle" href="#projects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>         
+          <ul class="dropdown-menu" >            
+            <li><a href="#doItEarly">DoItEarly</a></li>
+            <li><a href="#nba">NBA</a></li>
+            <li><a href="#pantry">Pantry</a></li>
+            <li><a href="#ucsd">UCSD</a></li>                               
+          </ul>         
+        </li>
+        <li class="listItem" id="interests"><a href="#interests">Interests</a></li>             
+      </ul> 
+      <div class="justify-content-right">
+        <h2>Aaron Wong<h2>
+      </div>               
+    </nav>   
+     -->
+       
 
-    <div class="col-2.col-4">  
-      <a href="index.html" class="anchorLink"><h3>Home</h3></a>
+    <button type="button" id="navbarCollapse">
+     <i class="medium material-icons">queue</i>
+    </button>
+
+     <!-- Page Content Holder -->
+    <div class="fixedBackImg" id="spaceBackground">
+      <div class="row title text-center justify-content-right">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 bodyText1" id="title">
+            <h1>My Portfolio<h1>
+        </div>
+      </div>
+
+      <!-- About Me -->
+      <div class="row intro parallax" id="parallax1">
+        <div class="row-h-10 intro shadeOutline" id="introTitle">
+            <div id="AboutMe">
+                About Me
+           </div>
+        </div>
+        <div class="text col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="row-h-70 intro shadeOutline" id="introText">
+            <p>I am currently an undergraduate student attending the University of California San Diego majoring in cognitive science and minoring in computer science.
+            </br>
+            <strong>Expected graduation:</strong> Winter 2020 
+            </br>
+            <strong>GitHub:</strong> <a href="https://github.com/FlamingC4" class="link"> https://github.com/FlamingC4 </a>
+            </br>
+            <strong>Email:</strong> aar34w23@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="col-2.col-4">  
-      <a href="aboutMe.html" class="anchorLink"><h3>About Me</h3></a>
+    <!-- Projects -->          
+    <div class = "row intro imageshadow parallax" id="parallax2"> 
+      <div class="row-h-10 intro shadeOutline" id="introTitle">
+        <div id="projects">
+          Projects
+          <div class="intro" id="introText">
+            <p> A couple of projects I have worked on in my career.</p> 
+          </div>           
+          <ul>
+            <a href="#doItEarly"><li><p>DoItEarly: a planner app</p></li></a>
+            <li><p>DoItEarly: a planner app</p></li>
+            <li><p>DoItEarly: a planner app</p></li>
+            <li><p>DoItEarly: a planner app</p></li>
+          </ul>            
+        </div>          
+      </div>
+    </div>   
+
+    <!-- DoItEarly -->
+    <div class="active doItEarly" >                               
+      <div class="row-h-10 intro introTitle">DoItEarly<div>            
+      <div class="row intro doItEarlyIntro">
+        <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">
+          <div class="row-h-10 intro" id="doItEarly"><h1><b>Synopsis:</b><h1></div>
+          <div class="row-h-70" >             
+              <p>Do It Early is an app that helps you keep on track through user interaction. With this app, users can also set a start time for the assignment, and delay it if necessary. Throughout the project, we received feedback through our peers, which helped us iterate on the idea. Here, I will go over the design process and the thinking behind our idea.</p>
+          </div> 
+        </div> 
+
+        <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left">
+          <div class="row slideshow-container">
+
+              <div class="mySlides fade">               
+                <img src="./img/doItEarlyNeedfinding.png" style="width:100%">
+                <div class="slideText">Need Finding (1/7)
+                <p>Our first step is to find out what people actually need. We did interviews and observations to develop the core idea for our app. In a nutshell, we found out that people easily get distracted and often can't accurately predict how long a project will take him/her. Therefore, we decided to develop a planner app where users can stay on track, as well as have some sort of time management system.
+                </p>
+                </div>
+              </div>
+                 
+
+              <div class="mySlides fade">
+                <video style="width:100%" controls><source src="./img/TeamAAAAPaperPrototypeVideo.mp4" type="video/mp4"></video>
+                <div class="slideText">Paper Prototypes (2/7)</div>
+                <p>We started with cutouts of what we wanted our app to look like. We shot a video to demonstate an example user flow to the app. In addition, the video was further analyzed to make sure our prototype maintains the problem we are trying to solve: does it help users track their assignments.
+                </p>
+              </div>
+
+              <div class="mySlides fade">                
+                <img src="./img/doItEarlyHeuristics.png" style="width:100%">
+                <div class="slideText">Hueristic Evaluations (3/7)</div>
+                <p>The next step was to have volunteers try out our app and give off feedback based on criteria called "hueristics". There, a score was given out for each hueristic category, with 0 being no trouble, to 4 being needs immediate changes. We used feedback to change our prototype as we were coding the app.
+                </p>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 7</div>
+                <img src="./img/doItEarlyEarlyDesign.png" style="width:80%">
+                <div class="slideText">Early Design (4/7) </div>
+                <p>Taking into account the hueristic evaluations, we drew up our plans to make the interface more user friendly and iterated on the paper protoype design. Some changes include moving around a few buttons, clearing up the main screen.
+                </p>                
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 7</div>
+                <img src="./img/doItEarlyAppEarlyDesign.png" style="width:100%">
+                <div class="slideText">App Development (5/7) </div>
+                <p>Here, we started coding the app. We changed a lot of things in the final prototype. For example, first, we had users select the assignment date through drop down boxes. These boxes would highlight yellow if the user inputs the wrong data. We realized this was very hectic as users would spend up to a minute just to set up his/her assignnment.
+                </p>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 7</div>
+                <img src="./img/doItEarlyAnalytics.png" style="width:100%">
+                <div class="slideText">User Testing (6/7)</div>
+                <p>To iterate on our design we tested out another layout of the enter details page, with no drop downs and used google analytics to track the time people spent on the different designs. It turns out that replacing dropdowns with calendars and clocks helped speed up the process significantly.
+                </p>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">7 / 7</div>
+                <img src="./img/doItEarlyFinished.png" style="width:100%">
+                <div class="slideText">Final Deliverables (7/7)</div>
+                <p>Given that app is only a prototype that focused more on the design rather than the coding, there are things that arent finished with the app. For example, the timer is still hardcoded and doesn't actually show what the user input. However, we inserted buttons to simulate what would happen when the countdown actually hits zero.
+                </p>
+              </div>
+           
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>       
+          </div>
+
+          <div class="slideShowDots">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+            <span class="dot" onclick="currentSlide(7)"></span> 
+          </div> 
+
+        </div> <!-- END SLIDESHOW -->  
+
+      </div>
+
+      
+    <div class="parallax" id="parallax2-1">   
     </div>
 
-    <div class="col-2.col-4">
-       <a href="projects.html" class="anchorLink"><h3>Projects</h3></a>
-    </div>
+    <div class="active doItEarly" id="doItEarlyCode">    
+      <div class="row-h-10 intro"><h1><b>Of course, there is also the technical side...</b><h1></div>
 
-    <div class="col-2.col-4">
-       <a href="interests.html" class="anchorLink"><h3>My Interests</h3></a>
-    </div>
+        <div class="row">             
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left">
+            <img src="./img/doItEarlyJson.png">
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right">
+            <h2>We used a "fake" database to store our data</h2>
+            <p>All of the information about the projects are stored in a JSON file, meaning that our database is avaliable only when we run the application. This database is mainly routed to the enter-details page, as user input will be recorded here, such as when the assignment is due.
+            </p>
+          </div>
+        </div>
 
-    <div class="col-2.col-4">
-       <a href="workExperience.html" class="anchorLink"><h3>Work Experience</h3></a>
-    </div>
-  </div>
-</div><!--End header-->
-<div id="mainPageImage">
-  <img src="img/mainPageWallPaper.jpg">
+        </br>
+
+        <div class="row">
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left">
+            <h2>Node for the backend</h2>
+            <p>Node was used to route through pages while using data from the JSON file. Node also allowed us to produce two different versions of our app and render pages differently depending on the version. This was used in Google Analytics where we compared two versions of the app.
+            </p>
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right">
+            <img src="./img/doItEarlyNode.png" style="width:65%">
+          </div>
+      </div> 
+
+      </br>
+
+      <div class="row">             
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left">
+            <img src="./img/doItEarlyMaterialize.png" style = "width: 100%">
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right">
+            <h2>Don't build from scratch</h2>            
+            <p>We found that using resources given were much more efficient than trying to code something by scratch. A useful tool we found was the materialize api. We liked the clock feature which was more efficient than having users manually inputting the time.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      </br>
+
+      <div class="row">
+        <div class="text col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 justify-content-left">
+         <h2>Sound Design</h2>        
+        </div>
+      </div>
+
+      <div class="parallax" id="parallax2-2"> 
+        <div class="shadeOutline">
+          <p>In order to create sounds that correspond to different alarms, we used Ableton to edit stock sounds. For example, for our "start working now" sound, a couple of equalizers were added to the sound in order to boost the bass to the point where the sound would clip and be uncomfortable to listen to. Here are a few sounds:
+          </p> 
+
+          <div class="row abletonText">
+            <p>Original alarm sound cropped and slightly bass boosted</p>
+            <audio controls>
+              <source src="./mp3/Alarm.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="row abletonText">
+            <p>Original alarm sound filtered</p>
+            <audio controls>
+              <source src="./mp3/alarm-filtered.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="row abletonText">
+            <p>Strong alarm heavily bass boosted (warning: turn down volume)</p>
+            <audio controls>
+              <source src="./mp3/StrongAlarm.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="row abletonText">
+            <p>Enter checkpoint sound</p>
+            <audio controls>
+              <source src="./mp3/checkpoint.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+         </div>
+      </div>
+
+      <div class="parallax imageshadow" id="parallax2-3"> 
+        <p> The Take Away </p>
+      </div>
+
+
+    </div> <!-- END DO IT EARLY -->
+
+    
+        
+
 </div>
-<div class="container">
-  
-</div><!--End container-->
 
 
-<div class="bottom">
 
-</div>
+  </body>  
 
-<script src="/bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
-<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/progress.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-
-</body>
+  <!-- JS, Popper.js, and jQuery links provided by Bootstrap website -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--JavaScript at end of body for optimized loading (materialize)-->
+  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
 </html>
