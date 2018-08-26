@@ -456,8 +456,12 @@ nav ul a {
 }
 
 .doItEarly p{
-	font-size: 1.75rem;
+	font-size: 1.2rem;
 	text-align: center;
+}
+
+.doItEarly .break{
+    margin-bottom: 10vh;
 }
 
 .doItEarly h1{
