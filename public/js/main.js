@@ -56,7 +56,28 @@ $(document).ready(function(){
     		projectDropShow[0].style.display = "none";
     	else
     		projectDropShow[0].style.display = "block";
-    });    
+    }); 
+
+    //forward and back on DoItEarly slides
+    $(".slideshow-container .next").click(function(){
+      showSlides($(".dot"), $(".mySlides"), slideIndex +=1); 
+    }); ;   
+
+    $(".slideshow-container .prev").click(function(){
+      showSlides($(".dot"), $(".mySlides"), slideIndex -=1); 
+    }); 
+    //*/
+
+    //forward and back on nbaPy slides
+    $(".nbaPy-slideshow-container .next").click(function(){
+      showSlides($(".nbaPydot"), $(".nbaPySlides"), slideIndex +=1); 
+    }); ;   
+
+    $("nbaPy-slideshow-container .prev").click(function(){
+      showSlides($(".nbaPydot"), $(".nbaPySlides"), slideIndex -=1); 
+    }); 
+    //*/
+
 
 });
 
@@ -77,7 +98,8 @@ function collapseNavbar() {
 var slideIndex = 1;
 var slides = $(".mySlides");
 var dots = $(".dot");
-showSlides(dots, slides,slideIndex);
+showSlides(dots, slides, slideIndex);
+
 
 //for NBAPy
 var nbaPySlideIndex = 1;
@@ -86,12 +108,12 @@ var nDots = $(".nbaPydot");
 showSlides(nDots, nSlides, nbaPySlideIndex);
 //*
 
-function plusSlides(n) {
-  showSlides(this.slideIndex += n);
+function plusSlides(d, s, n) { 
+  showSlides(d, s, slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(this.slideIndex = n);
+  showSlides(slideIndex = n);
 }
 
 function showSlides(dot, slides, n) {

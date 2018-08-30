@@ -734,12 +734,9 @@ img {
 
 /* nbaPy Slideshow container */
 .nbaPy-slideshow-container {
- /* max-width: 1000px;*/
-  /*position: fixed;*/
-  margin: auto;
-  margin-right: 5vw;
-  margin-left: 4vw;
-  height: 50vh;
+  position: relative;
+  margin-top: 5vw;
+   
 }
 
 /* The dots/bullets/indicators */
@@ -757,6 +754,22 @@ img {
 .nbaPyDot:active, .nbaPyDot:hover {
   background-color: #000;
 }
+
+/*.nbaPySlides {
+    display: block;
+    max-height: 71vh;
+    min-height: 71vh;    
+}
+*/
+.nbaPySlidesImg{
+    
+
+}
+
+.nbaPySlidesText{
+    font-size: 1.1rem;   
+}
+
 
 
 /* On smaller screens, decrease text size */
