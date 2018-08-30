@@ -13,9 +13,7 @@ $(document).ready(function(){
 
     //project dropdown trigger
     navbarDrop.dropdown();
-    console.log(navbarDrop);
-   
-
+    
     navbarCollapse.click( function(){
         navbar.toggleClass('active');
         content.toggleClass('active');
@@ -75,22 +73,29 @@ function collapseNavbar() {
     }
 }
 
-
+//for DoItEarly
 var slideIndex = 1;
-showSlides(slideIndex);
+var slides = $(".mySlides");
+var dots = $(".dot");
+showSlides(dots, slides,slideIndex);
+
+//for NBAPy
+var nbaPySlideIndex = 1;
+var nSlides = $(".nbaPySlides");
+var nDots = $(".nbaPydot");
+showSlides(nDots, nSlides, nbaPySlideIndex);
+//*
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(this.slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides(this.slideIndex = n);
 }
 
-function showSlides(n) {
-  var i;
-  var slides = $(".mySlides");
-  var dots = $(".dot");
+function showSlides(dot, slides, n) {
+  var i;    
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -102,6 +107,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+
 // function collapseSidebar2() {
 //     let sidebar = $('#sidebar');
 //     let content = $('#content');
