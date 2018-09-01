@@ -99,7 +99,10 @@ var slideIndex = 1;
 var slides = $(".mySlides");
 var dots = $(".dot");
 showSlides(dots, slides, slideIndex);
-
+function doItEarlySlide(n) {  
+  showSlides($(".dots"), $(".mySlides"), slideIndex = n);
+}
+//*
 
 //for NBAPy
 var nbaPySlideIndex = 1;
@@ -112,12 +115,10 @@ function plusSlides(d, s, n) {
   showSlides(d, s, slideIndex += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+
 
 function showSlides(dot, slides, n) {
-  var i;    
+  var i;
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -129,6 +130,9 @@ function showSlides(dot, slides, n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+
+
 
 
 // function collapseSidebar2() {

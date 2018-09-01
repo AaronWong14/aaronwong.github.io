@@ -154,22 +154,23 @@
         </div>
       </div>
 
-      <!-- About Me -->
+      <!-- About Me -->      
       <div class="row intro parallax" id="parallax1">
         <div class="row-h-10 intro shadeOutline" id="introTitle">
-          About Me           
+         About Me 
           <div class="row-h-70 intro shadeOutline" id="introText">
+            <div id="aboutMe"></div>
             <p>I am currently an undergraduate student attending the University of California San Diego majoring in cognitive science and minoring in computer science.
-            </br>
+            </br>            
             <strong>Expected graduation:</strong> Winter 2020 
             </br>
             <strong>GitHub:</strong> <a href="https://github.com/FlamingC4" class="link"> https://github.com/FlamingC4 </a>
-            </br>
+            </br>            
             <strong>Email:</strong> aar34w23@gmail.com
-            </p>
-          </div>
+            </p>            
+          </div>          
         </div>
-      </div>
+      </div>      
     </div>
 
     <!-- Projects -->          
@@ -196,7 +197,7 @@
       <div class="row intro doItEarlyIntro">
         <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">
           <div class="row-h-10 intro" id="doItEarly"><h1><b>Synopsis:</b><h1></div>
-          <div class="row-h-70" >             
+          <div class="row-h-70">             
               <p>Do It Early is an app that helps you keep on track through user interaction. With this app, users can also set a start time for the assignment, and delay it if necessary. Throughout the project, we received feedback through our peers, which helped us iterate on the idea. Here, I will go over the design process and the thinking behind our idea.</p>
           </div> 
         </div> 
@@ -237,7 +238,7 @@
 
               <div class="mySlides fade">
                 <div class="numbertext">5 / 7</div>
-                <img src="./img/doItEarlyAppEarlyDesign.png" style="width:100%">
+                <img src="./img/doItEarlyAppEarlyDesign.png" style="width:90%">
                 <div class="slideText">App Development (5/7) </div>
                 <p>Here, we started coding the app. We changed a lot of things in the final prototype. For example, first, we had users select the assignment date through drop down boxes. These boxes would highlight yellow if the user inputs the wrong data. We realized this was very hectic as users would spend up to a minute just to set up his/her assignnment.
                 </p>
@@ -255,7 +256,7 @@
                 <div class="numbertext">7 / 7</div>
                 <img src="./img/doItEarlyFinished.png" style="width:100%">
                 <div class="slideText">Final Deliverables (7/7)</div>
-                <p>Given that app is only a prototype that focused more on the design rather than the coding, there are things that arent finished with the app. For example, the timer is still hardcoded and doesn't actually show what the user input. However, we inserted buttons to simulate what would happen when the countdown actually hits zero.
+                <p>Given that this app is only a prototype which focused more on the design rather than the coding, there are things that arent finished with the app. For example, the timer is still hardcoded and doesn't actually show what the user input. However, we inserted buttons to simulate what would happen when the countdown actually hits zero.
                 </p>
               </div>
            
@@ -264,14 +265,14 @@
           </div>
 
           <div class="slideShowDots">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-            <span class="dot" onclick="currentSlide(4)"></span> 
-            <span class="dot" onclick="currentSlide(5)"></span> 
-            <span class="dot" onclick="currentSlide(6)"></span> 
-            <span class="dot" onclick="currentSlide(7)"></span> 
-          </div> 
+            <span class="dot" onclick="doItEarlySlide(1)">1</span> 
+            <span class="dot" onclick="doItEarlySlide(2)">2</span> 
+            <span class="dot" onclick="doItEarlySlide(3)">3</span> 
+            <span class="dot" onclick="doItEarlySlide(4)">4</span> 
+            <span class="dot" onclick="doItEarlySlide(5)">5</span> 
+            <span class="dot" onclick="doItEarlySlide(6)">6</span> 
+            <span class="dot" onclick="doItEarlySlide(7)">7</span> 
+          </div>          
 
         </div> <!-- END SLIDESHOW -->  
 
@@ -410,15 +411,7 @@
 
           </div>
 
-        </div>
-
-         <div class="nbaPySlides fade">
-          <div class="numbertext">7 / 7</div>
-          <img src="./img/doItEarlyFinished.png" style="width:100%">
-          <div class="slideText">Final Deliverables (7/7)</div>
-          <p>Given that app is only a prototype that focused more on the design rather than the coding, there are things that arent finished with the app. For example, the timer is still hardcoded and doesn't actually show what the user input. However, we inserted buttons to simulate what would happen when the countdown actually hits zero.
-          </p>
-        </div>            
+        </div>               
        
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>       
@@ -433,6 +426,24 @@
 
     </div>
     <!-- END NBAPY --> 
+
+    <div id="nbaPy_To_Pantry_gradient"></div>
+
+    <!-- pantry -->
+    <div class="active pantry">
+      <div class="pantryIntroText">Pantry</div>
+      <div class="row intro PantryIntro">
+          <div class="text col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center">
+            <div class="intro shadeOutline"><h1><b>Synopsis:</b><h1></div>
+            <div class="shadeOutline">             
+                <p>Food: </p>
+            </div> 
+          </div> 
+        </div>
+    </div>
+    <!-- END PANTRY -->
+
+    
 
     
         
