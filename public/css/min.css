@@ -784,6 +784,16 @@ img {
   background-color: #000;
 }
 
+.nbaPy-slideshow-container{   
+ /* max-width: 1000px;*/
+  position: relative;
+
+  margin-top: 4vh;
+  margin-right: 4vw;
+  margin-left: 4vw;
+}
+
+
 /*.nbaPySlides {
     display: block;
     max-height: 71vh;
@@ -799,6 +809,47 @@ img {
     font-size: 1.1rem;   
 }
 
+/* Next & previous buttons */
+.rowSSprev, .rowSSnext {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  font-size: 7.5vw;
+  margin-top: 10%;
+  width: auto;
+ 
+ 
+  color: white;
+  font-weight: bold;
+ 
+  transition: 0.6s ease;
+  
+}
+
+/* Position the "next button" to the right */
+.rowSSnext {
+  right: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+.rowSSprev {
+  left: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.rowSSprev:hover, .rowSSnext:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.pantry-slideshow-container{   
+ /* max-width: 1000px;*/
+  position: relative;
+  margin: auto;
+  margin-right: 5vw;
+  margin-left: 4vw;
+
+}
 
 
 /* On smaller screens, decrease text size */

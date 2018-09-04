@@ -393,28 +393,30 @@
         </div>
       </div>
 
-      <div class="nbaPy-slideshow-container"> 
+      <div class="row nbaPy-slideshow-container"> 
 
         <div class="nbaPySlides fade">
-          <div class="row">
+          <div class="row">           
 
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">
               <div class="numbertext">7 / 7</div>
-              <img src="./img/doItEarlyFinished.png" style="width:100%">
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
             </div>
 
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Final Deliverables (123/7)</div>
               <p>Given that app is only a prototype that focused more on the design rather than the coding, there are things that arent finished with the app. For example, the timer is still hardcoded and doesn't actually show what the user input. However, we inserted buttons to simulate what would happen when the countdown actually hits zero.
-              </p>
+              </p>               
             </div>
+
+            <a class="rowSSprev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="rowSSnext" onclick="plusSlides(1)">&#10095;</a>  
 
           </div>
 
         </div>               
        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>       
+              
       </div>
 
         <div class="nbaPySlideShowDots">
@@ -432,14 +434,36 @@
     <!-- pantry -->
     <div class="active pantry">
       <div class="pantryIntroText">Pantry</div>
-      <div class="row intro PantryIntro">
-          <div class="text col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center">
-            <div class="intro shadeOutline"><h1><b>Synopsis:</b><h1></div>
-            <div class="shadeOutline">             
+      <div class="row intro PantryIntro">       
+        <div class="row">
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">
+            <div class="intro" id="pantry"> 
+                <h1><b>Synopsis:</b><h1></div>           
                 <p>Food: </p>
             </div> 
-          </div> 
-        </div>
+          </div>
+
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left">
+            <div class="row pantry-slideshow-container">
+
+              <div class="pantrySlides fade">               
+                <img src="./img/doItEarlyNeedfinding.png" style="width:100%">
+                <div class="slideText">Need Finding (1/7)
+                  <p>Our first step is to find out what people actually need. We did interviews and observations to develop the core idea for our app. In a nutshell, we found out that people easily get distracted and often can't accurately predict how long a project will take him/her. Therefore, we decided to develop a planner app where users can stay on track, as well as have some sort of time management system.
+                  </p>
+                </div>
+              </div>              
+       
+              <a class="prev">&#10094;</a>
+              <a class="next">&#10095;</a>       
+            </div>
+
+            <div class="pantrySlideShowDots">
+              <span class="dot" onclick="pantrySlide(1)">1</span>           
+            </div>
+
+          </div> <!-- END SLIDESHOW -->          
+        
     </div>
     <!-- END PANTRY -->
 
