@@ -29,6 +29,10 @@ a, a:hover, a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
+
+html, body {
+    height:100%;
+} 
 /* ---------------------------------------------------
     NAVBAR STYLE AND EXPANSION
 ----------------------------------------------------- */
@@ -481,6 +485,16 @@ nav ul a {
 	background-image: url('../img/doItEarlyAbleton.png');	
 }
 
+#parallax2-3{
+    background-size: 100%;   
+    height: 80vh;
+    background-image: url('../img/doItEarlyStart.png'); 
+    margin-top: 3vh;
+    margin-bottom: 6vh; 
+    margin-left: 2vh;
+    margin-right: 2vh; 
+}
+
 .abletonText p{
 	margin-top: .9rem;
 	font-size: 1.25rem;
@@ -493,10 +507,11 @@ nav ul a {
     font-size: 2.5rem;
 }
 
-#parallax4{
-    min-height: 40rem;
+#parallax4{    
+    min-height: 100vh;
     background-size: 100%;
-    background-image: url('../images/feedback1.png');
+    background-image: url('../img/pantryPantry.png'); 
+    
 }
 
 #parallax5{
@@ -542,6 +557,22 @@ ul{
 /*---------------------------------------------------
     DOITEARLY
 ---------------------------------------------------*/
+.doItEarlyDrop{
+    cursor: pointer;
+    justify-content: right;
+    border-style: solid;
+    border-width: 0.5vh;
+    background-color: white;
+}
+
+#doItEarlyDrop{
+    width: 20vw !important;
+}
+
+ #parallax2-3 .shadeOutline{
+    width: 80vw;
+ }
+
 .doItEarly{
     justify-content: center;
     /*padding: 2% 2%;*/
@@ -619,6 +650,23 @@ ul{
     text-align: center;
 }
 
+.pantry h1{   
+    font-size: 4rem;
+    text-align: center;
+}
+
+.pantry p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+/*----------------------------------------------------
+    UCSD
+-----------------------------------------------------*/
+#pantry_to_ucsd_gradient{
+
+}
 
 /* ---------------------------------------------------
    	SLIDESHOWS
@@ -635,6 +683,7 @@ ul{
 
 .mySlides p{
 	font-size: 1.1rem;
+
 }
 
 img {
@@ -703,15 +752,6 @@ img {
 
 /* The dots/bullets/indicators */
 .dot {
-/*    cursor: pointer;
-    font-size: 1.1rem
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;*/
     cursor: pointer;
     margin: 0 2px;
     background: #fff;
@@ -758,6 +798,77 @@ img {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+/* doItEarlyFindings slideshow */
+.mySlidesFind{
+    text-align: center;
+}
+
+.do-it-early-findings-slideshow-container{
+    position: relative;
+    margin: auto;
+    margin-right: 5vw;
+    margin-left: 4vw;
+}
+
+.findingDot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    font-size: 1.5rem;
+}
+
+
+
+.findingDot:active, .findingDot:hover {
+    background-color: white;    
+}
+
+.dotFind{
+    align-content: center;
+}
+
+.dotFind .active{
+    background-color: white;
+    text-align:center;
+    align-content: left;
+}
+
+.prevFind, .nextFind {
+  cursor: pointer;
+  position: absolute;
+  margin-top: 65%;
+  width: auto;
+  /*padding: 16px;
+  margin-top: -22px;*/
+  color: black;
+  font-weight: bold;
+  font-size: 5vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.nextFind {
+    right: -4vw;
+    margin-top: -2vh;     
+    border-radius: 3px 0 0 3px;
+}
+
+.prevFind {
+    left: -4vw;
+    margin-top: -2vh;    
+    border-radius: 3px 0 0 3px;
+}
+
+.prevFind:hover, .nextFind:hover {
+  background-color: rgba(255,255,255,1);
 }
 
 

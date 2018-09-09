@@ -192,9 +192,54 @@
     </div>   
 
     <!-- DoItEarly -->
-    <div class="active doItEarly" >                               
-      <div class="row-h-10 intro introTitle">DoItEarly<div>            
-      <div class="row intro doItEarlyIntro">
+    <div class="doItEarlyHeader">      
+        <div class="introTitle">DoItEarly <a class="dropdown-trigger" data-target="doItEarlyDrop"><i class="medium material-icons doItEarlyDrop">arrow_downward</i></a><div>  
+    </div>
+
+    <ul id="doItEarlyDrop" class="dropdown-content dropdown-menu">      
+      <li><a href="#doItEarly">DoItEarly</a></li>
+      <li><a href="#doItEarlyIntro">Intro</a></li>
+      <li><a href="#doItEarlyParallax">Image</a></li>
+      <li><a href="#doItEarlyCode">Code</a></li>
+      <li class="divider"></li>
+      <li onclick="doItEarlyCollapse()"><a id="dieToggle" href="#doItEarly">Minimize this section</a></li>  
+    </ul>
+
+
+    <div class="active doItEarly"> 
+      <div class="intro doItEarlyIntro parallax imageshadow" id="parallax2-3">
+        <div class ="shadeOutline">
+          <h1><b>What we found:</b><h1>
+          <div class="row do-it-early-findings-slideshow-container">
+
+            <div class="mySlidesFind fade">               
+              <div class="slideText">
+              <p>For my class, I was put into the group titled "Sound-Feedback." We were to develop some kind of app that utilizes sound.
+              </p>
+              Topic (1/6)
+              </div>
+            </div>
+
+            <div class="mySlidesFind fade">               
+              <div class="slideText">
+              <p>adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe adsfasfd fasfhe 
+              </p>
+              Test (2/6)
+              </div>
+            </div>
+
+            <a class="prevFind">&#10094;</a>
+            <a class="nextFind">&#10095;</a>
+          </div>
+
+          <div class="dotFind">
+            <span class="findingDot" onclick="doItEarlyFindSlide(1)"></span>
+            <span class="findingDot" onclick="doItEarlyFindSlide(2)"></span>  
+          </div> 
+
+        </div>
+      </div>        
+      <div class="row">
         <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">
           <div class="row-h-10 intro" id="doItEarly"><h1><b>Synopsis:</b><h1></div>
           <div class="row-h-70">             
@@ -434,13 +479,15 @@
     <!-- pantry -->
     <div class="active pantry">
       <div class="pantryIntroText">Pantry</div>
-      <div class="row intro PantryIntro">       
-        <div class="row">
+      <div class="row intro PantryIntro">      
           <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">
-            <div class="intro" id="pantry"> 
-                <h1><b>Synopsis:</b><h1></div>           
-                <p>Food: </p>
-            </div> 
+            
+              <div class="row-h-10 intro pantry"> <h1><b>Synopsis:</b><h1></div>
+              <div class="row-h-70">         
+                <p>Food:fadsfdsfsd </p>
+              </div>
+
+          
           </div>
 
           <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left">
@@ -459,13 +506,44 @@
             </div>
 
             <div class="pantrySlideShowDots">
-              <span class="dot" onclick="pantrySlide(1)">1</span>           
+              <span class="pantrydot" onclick="pantrySlide(1)">1</span>           
+            </div>
+          </div> <!-- END SLIDESHOW --> 
+
+        </div> 
+
+        <div id="parallax4" class="parallax"></div>  
+
+        <div class="active pantry" id="pantryCode">    
+          <div class="row-h-10 intro"><h1><b>the technical side...</b><h1></div>
+
+            <div class="row">             
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left">
+                <img src="./img/doItEarlyJson.png" style="max-width: 50%">
+              </div>
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right">
+                <h2>We used a "fake" database to store our data</h2>
+                <p>All of the information about the projects are stored in a JSON file, meaning that our database is avaliable only when we run the application. This database is mainly routed to the enter-details page, as user input will be recorded here, such as when the assignment is due.
+                </p>
+              </div>
             </div>
 
-          </div> <!-- END SLIDESHOW -->          
+            <div class="break"></div>
+        </div>
+              
         
     </div>
     <!-- END PANTRY -->
+
+    <div id="pantry_to_ucsd_gradient"> </div>
+
+    <div class="ucsd">
+
+
+
+
+    </div>
+    <!-- END UCSD -->
 
     
 
@@ -480,6 +558,8 @@
 
   <!-- JS, Popper.js, and jQuery links provided by Bootstrap website -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/main.js"></script>
