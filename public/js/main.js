@@ -1,6 +1,8 @@
 "use strict";
 
 $(document).ready(function(){
+    var rellax = new Rellax('.rellax');
+
 	let navbar = $('#navbar');
     let content = $('#content');
     let navbarCollapse = $('#navbarCollapse');
@@ -85,20 +87,26 @@ $(document).ready(function(){
 
     $(".slideshow-container .prev").click(function(){
       //edgecase: click next at start of slideshow (loop back to last slide)
-       if(slideIndex == 1)
-        showSlides($(".slideShowDots .dot"), $(".mySlides"), slideIndex = $(".mySlides").length); 
-      else
-       showSlides($(".slideShowDots .dot"), $(".mySlides"), slideIndex -=1); 
+        if(slideIndex == 1)
+            showSlides($(".slideShowDots .dot"), $(".mySlides"), slideIndex = $(".mySlides").length); 
+        else
+            showSlides($(".slideShowDots .dot"), $(".mySlides"), slideIndex -=1); 
     }); 
     //*/
 
     //forward and back on nbaPy slides
-    $(".nbaPy-slideshow-container .next").click(function(){
-      showSlides($(".nbaPySlideShowDots .nbaPydot"), $(".nbaPySlides"), nbaPySlideIndex +=1); 
-    }); ;   
+    $(".nbaPy-slideshow-container .rowSSnext").click(function(){    
+        if(nbaPySlideIndex == $(".nbaPySlides").length)
+            showSlides($(".nbaPySlideShowDots .nbaPyDot"), $(".nbaPySlides"), nbaPySlideIndex = 1);
+        else
+            showSlides($(".nbaPySlideShowDots .nbaPyDot"), $(".nbaPySlides"), nbaPySlideIndex += 1);  
+    }); 
 
-    $("nbaPy-slideshow-container .prev").click(function(){
-      showSlides($(".nbaPySlideShowDots .nbaPydot"), $(".nbaPySlides"), nbaPySlideIndex -=1); 
+    $(".nbaPy-slideshow-container .rowSSprev").click(function(){     
+        if(nbaPySlideIndex == 1)
+            showSlides($(".nbaPySlideShowDots .nbaPyDot"), $(".nbaPySlides"), nbaPySlideIndex = $(".nbaPySlides").length);
+        else
+            showSlides($(".nbaPySlideShowDots .nbaPyDot"), $(".nbaPySlides"), nbaPySlideIndex -= 1); 
     }); 
     //*/
 
@@ -148,9 +156,10 @@ function doItEarlySlide(n) {
 //for NBAPy
 var nbaPySlideIndex = 1;
 var nSlides = $(".nbaPySlides");
-var nDots = $(".nbaPySlideShowDots .nbaPydot");
+var nDots = $(".nbaPySlideShowDots .nbaPyDot");
+showSlides(nDots, nSlides, nbaPySlideIndex);
 function nbaPySlide(n){
-showSlides(nDots, nSlides, nbaPySlideIndex = n);
+  showSlides(nDots, nSlides, nbaPySlideIndex = n);
 }
 //*
 

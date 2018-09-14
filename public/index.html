@@ -104,7 +104,7 @@
           <li id="intro"><a href="#aboutMe"><i class="material-icons left icon">person_pin_circle</i>About Me</a></li>
           <!-- Dropdown Trigger -->
           <li><a class="dropdown-trigger" data-target="dropdown1"><i class="material-icons left icon">phonelink</i>Projects<i class="material-icons right icon">arrow_drop_down</i></a></li>          
-          <li id="intro"><a href="#interests"><i class="material-icons left icon">polymer</i>Interests</a></li>
+          <li><a class="dropdown-trigger" data-target="dropdown2"><i class="material-icons left icon">polymer</i>Interests<i class="material-icons right icon">arrow_drop_down</i></a></li>
         </ul>
       </div>
     </nav>
@@ -117,6 +117,14 @@
       <li><a href="#nba">NBA</a></li>
       <li><a href="#pantry">Pantry</a></li>
       <li><a href="#ucsd">UCSD</a></li>  
+    </ul>
+
+     <ul id="dropdown2" class="dropdown-content dropdown-menu">
+      <li><a href="#interests">Intro</a></li>
+      <li class="divider"></li>
+      <li><a href="#basketball">Basketball</a></li>
+      <li><a href="#nba">Vehicles</a></li>
+      <li><a href="#pantry">Music</a></li>       
     </ul>
 
     
@@ -147,36 +155,58 @@
     </button>
 
      <!-- Page Content Holder -->
-    <div class="fixedBackImg" id="spaceBackground">
+    <div class="fixedBackImg parallax" id="cityBackground">
       <div class="row title text-center justify-content-right">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 bodyText1" id="title">
-            <h1>My Portfolio<h1>
+       <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5"></div>
+        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7" id="title">
+            <h1>I am</h1><h1> Aaron Wong</h1>            
         </div>
       </div>
 
+
+             
+    
+
       <!-- About Me -->      
-      <div class="row intro parallax" id="parallax1">
-        <div class="row-h-10 intro shadeOutline" id="introTitle">
-         About Me 
-          <div class="row-h-70 intro shadeOutline" id="introText">
-            <div id="aboutMe"></div>
-            <p>My name is <b>Aaron Wong</b> an I am currently an undergraduate student attending the University of California San Diego majoring in cognitive science and minoring in computer science. I want this portfolio to be a little bit more than just a place to showcase my work, I want it to be a place where I can express my personality through my own interests such as basketball.
+      <div class="intro">
+
+        <div class="intro shadeOutline" id="introTitle">
+         About Me: 
+          <div class="intro shadeOutline" id="introText">
+            <div id="aboutMe"></div> <!-- for the smooth scroll -->
+            <p>My name is <b>Aaron Wong</b> and I am currently an undergraduate student attending the University of California San Diego majoring in cognitive science and minoring in computer science. I want this portfolio to be a little bit more than just a place to showcase my work, I want it to be a place where I can express my personality through my own interests.</p>
             </br>
-            </br>            
-            <strong>Expected graduation:</strong> Winter 2020 
-            </br>
-            <strong>GitHub:</strong> <a href="https://github.com/FlamingC4" class="link"> https://github.com/FlamingC4 </a>
-            </br>            
-            <strong>Email:</strong> aar34w23@gmail.com
-            </p>            
-          </div> 
-          <img src= "./img/memeQuote.jpg" style="align-content: center">    
+          </div>
+            
+            <div class="aboutMeInfo row">
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">
+                <p>
+                <i class="material-icons icon">school</i><strong>School: </strong>University of California San Diego 
+                </br>          
+                <i class="material-icons icon">grade</i><strong>Expected graduation: </strong> Winter 2020 
+                </br>                
+                </p>
+              </div>
+
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">            
+                <p>
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aaron-wong-795878170/" class="link"> https://www.linkedin.com/in/aaron-wong-795878170/ </a> 
+                </br>
+                <strong>GitHub:</strong> <a href="https://github.com/FlamingC4" class="link"> https://github.com/FlamingC4 </a>
+                </br>            
+                <strong>Email:</strong> aar34w23@gmail.com
+                </p>
+              </div>
+
+            </div> 
+           
         </div>
-      </div>      
-    </div>
+      </div> 
+    </div>     
+    
 
     <!-- Projects -->          
-    <div class = "row intro imageshadow parallax" id="parallax2"> 
+    <div class = "row intro imageshadow rellax" data-rellax-speed="4" id="parallax1"> 
       <div class="row-h-10 intro shadeOutline" id="introTitle">
         <div id="projects">
           Projects
@@ -186,8 +216,8 @@
           <ul>
             <a href="#doItEarly"><li><p>DoItEarly: a planner app</p></li></a>
             <a href="nbaPy"><li><p>NBAPy: using data science to answer a question in sports</p></li></a>
-            <li><p>DoItEarly: a planner app</p></li>
-            <li><p>DoItEarly: a planner app</p></li>
+            <li><p>Pantry: helping you plan your next meal</p></li>
+            <li><p>UCSD: the design for an app that would bring sports audiences together</p></li>
           </ul>            
         </div>          
       </div>
@@ -483,42 +513,218 @@
       <div id="parallax3" class="parallax">        
         <div class="row intro nbaPyIntro">
           <div class="text col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center">
-            <div class="intro shadeOutline"><h1><b>Synopsis:</b><h1></div>
-            <div class="shadeOutline">             
-                <p>Data Science. This project can be viewed by cloning the repo and opening it on Jupyter. In the case that you don't have Jupyter installed or if you want to save sometime, here is the rundown in the from of a slideshow: </p>
+            <div class="intro shadeOutline "><h1><b>Synopsis:</b><h1></div>
+            <div class="shadeOutline">
+                <p><b>Disclaimer: I understand that this project may be hard to follow if you have limited knowledge about basketball. I will do my best to explain this project to such audiences, but essentially, we are trying to find out if teams do better with one extremely good player as opposed to a handful of players who are above average</b></p>           
+                <p>As avid NBA fans, we are interested in not just the gameplay of basketball, but the statistics behind it. It is said that good teams have at least one superstar on them, someone contributes stats that are higher than most other players. However, there are so many other factors that lead to a team's success, including having a good defense, a good offense, good coaching, good role players, etc. Teams tend to have different strengths and weaknesses, with a combination many factors determining if they do well or not. Although there are many statistics present, we want to see if we can determine what statistical trends (if any) that generally result in success in the NBA.<u>(Note: we will be testing data on all teams from the 2000-2001 season to the 2016-2017 season)</u>
+                <p>
+                <p> This project can be viewed by cloning the repo and opening it on Jupyter. In the case that you don't have Jupyter installed or if you want to save sometime, here is the rundown in the from of a slideshow: </p>
             </div> 
           </div> 
         </div>
       </div>
 
+      <!-- https://github.com/seemethere/nba_py -->
       <div class="row nbaPy-slideshow-container"> 
 
-        <div class="nbaPySlides fade">
+        <div class="nbaPySlides slide1 fade">
           <div class="row">           
 
-            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">
-              <div class="numbertext">7 / 7</div>
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/doItEarlyFinished.png" style="width:100%">                            
             </div>
 
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
-              <div class="slideText">Final Deliverables (123/7)</div>
-              <p>Given that app is only a prototype that focused more on the design rather than the coding, there are things that arent finished with the app. For example, the timer is still hardcoded and doesn't actually show what the user input. However, we inserted buttons to simulate what would happen when the countdown actually hits zero.
+              <div class="slideText">Question and Hypothesis (1/8)</div>
+              <p><b>Research Question:</b> What makes a 21st century NBA team good? With 30 teams, we define a “good” team as one that finishes within the top 8 in regards to number of wins (during the regular season). Due to their success in the regular season, these good teams are most likely to be the most successful in the NBA playoffs.
+              <p>
+              <p><b>Hypothesis:</b> We believe that the defining characteristic of a good NBA team will be those with a higher average impact across its players, with the least amount of variance between players. Impact will be defined as the sum of the weighted factors of points, rebounds, assists, blocks, steals, and turnovers per game for each player in one team. All 6 of these factors will be weighed based on how they affect teams in scoring and/or preventing opposing teams from scoring.
               </p>               
             </div>
+            
+          </div>
+        </div>
 
-            <a class="rowSSprev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="rowSSnext" onclick="plusSlides(1)">&#10095;</a>  
+        <div class="nbaPySlides fade">
+          <div class="row">           
 
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">API (2/8)</div>
+              <p>
+              We found a very helpful API called nba_py that would scrape and organize data from nba.com. Here is an example of a class within the API called TeamStats. The constructor will initialize a TeamStats object, first with default data from the constants file. This object contains some important fields we will want to use later such as "rank." In order to actually instantiate a TeamStats object with useful data, we can input some parameters from the self.JSON section. For example: TeamStats(team_id = 1610612737, season ='2000-01').overall() will essentially scrape data from a specific basketball team (the Atlanta Hawks) from a specific season (2000-2001 season).
+              </p>               
+            </div>
+            
           </div>
 
-        </div>               
+        </div> 
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Scraping the data for each player in each season (3/8)</div>
+              <p>
+               After we had imported all the data, we split certain parts of the available data in certain ways so that we could more efficiently use it the way we wanted to. We first grouped the data into dataframes for all of the individual players’ stats from each season. We had one dataframe for each season from 2000 to 2016, which included all the players in the entire NBA league, as well as many player statistics apart from the six that we were going use to calculate impact. These other statistics included age, games won and lost, rankings for each statistic, and even number of fantasy points, amongst others.
+              </p>               
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Scraping the data for each team for each season (4/8)</div>
+              <p> After organizing the individual player data, we organized the team data. For each year, we organized each team’s roster for each year into a dataframe. For example, from the year 2000, we had 30 rosters, 1 for each of the 30 NBA teams. We repeated this process to obtain all the rosters from 2000 to 2016, a grand total of 510 rosters. Now after this initial organizing, our data was grouped in ways that would make it a lot easier to call on in our cleaning stage.
+              </p>               
+            </div>
+            
+          </div>
+
+        </div> 
+
+         <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Data Cleaning (5/8)</div>
+              <p> Now, we have all the data we essentially need. It's time to throw away some unnecssary data. One criteria we had was that a player must play at least 7 games. This gets rid of players who get injured or sign really quick contracts with some teams. Another criteria we had was that a player must average at least 5 minutes of playing time a game as their impact to the team will most likely be insignificant. We now put this cleaned data in 17 CSV files, one for each season.
+              </p>               
+            </div>
+            
+          </div>
+
+        </div>   
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Team Data Aggregration (6/8)</div>
+              <p>We only want the top 8 teams from each season to compare, so we created dataframes for each season in which we listed all 30 teams by name (which corresponded with a unique team ID). We then took these dataframes and made new ones in which we had sorted teams by the number of wins in a descending order. So, the top teams at the top of the dataframe would be the teams with the most number of wins, and those at the bottom with the least. As mentioned earlier, we then cut each dataframe to contain only teams with the top 8 wins.
+              </p>               
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Dataframes of players (7/8)</div>
+              <p>And now, we have data for each player from each of the top 8 teams for the season. Here is an example with the 2016-2017 season as an example. 
+              </p>               
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Data Analysis (8/8)</div>
+              <p>
+              For each year, we used our CSV files to visualize the data for each of the six categories used to calculate total impact. We created histograms in which we graphed the points, blocks, steals, assists, rebounds, and turnovers per game against the frequency, in this case the number of players who fell into particular ranges for each statistic. So we would have 6 histograms for each year (from 2000 to 2016). These allowed us to determine how the data was distributed, and helped us decide how we should calculate the weights for each category.The points per game histogram for 2016 shown on the left, for example, signifies that the greatest number of players scored about 7 points per game.
+              </p>               
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">More Data Analysis (9/8)</div>
+              <p>
+              Since every category's distribution tested positive for being a log-normal distribution, we needed to normalize each distribution in order to use the z-score test for our impact calculations (z-score tests are only effective when the distribution is normal). In order to do so, we looped through the list of dataframes and converting the values of each category (points, assists, turnovers, rebounds, steals and blocks) to their log values.              
+              </p>               
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Setting Values For the Data (10/8)</div>
+              <p>
+              Next, we used the newly normalized values to create a list for each category's average value and standard deviation for every year. Because we are essentially measuring how good a player is, we need to determine the amount of points for each of the 6 categories. We settled for the following:              
+              </p>
+              <p>
+                <li><u>Points</u> are worth 1, as each corresponds to an actual point in the game.</li>
+                <li><u>Rebounds</u> are worth 1.2, as they do not necessarily lead to a score but give more opportunities for them.</li>
+                <li><u>Blocks</u> are worth 2.3, as it prevents a potential 2-3 points from being made (2 is more common than 3 so we chose 2.3 instead of 2.5).</li>
+                <li><u>Steals</u> are worth 1.8, as they are more significant than rebounds due to likelihood of fastbreak.</li>
+                <li><u>Assists</u> are worth 2.3, as they always lead to a score and so they are the opposite of blocks.</li>
+                <li><u>Turnovers</u> are worth -1.8, as they are the opposite of steals.</li> 
+              </p>              
+            </div>
+            
+          </div>
+
+        </div>                      
+
+           
+
+        <a class="rowSSprev">&#10094;</a>
+        <a class="rowSSnext">&#10095;</a>           
        
               
-      </div>
+      
 
         <div class="nbaPySlideShowDots">
-          <span class="nbaPyDot" onclick="currentSlide(1)"></span>         
+          <span class="nbaPyDot" onclick="nbaPySlide(1)">1</span>
+          <span class="nbaPyDot" onclick="nbaPySlide(2)">2</span>  
+          <span class="nbaPyDot" onclick="nbaPySlide(3)">3</span>
+          <span class="nbaPyDot" onclick="nbaPySlide(4)">4</span>
+          <span class="nbaPyDot" onclick="nbaPySlide(5)">5</span>         
         </div> 
 
       </div> <!-- END SLIDESHOW -->
@@ -537,7 +743,7 @@
             
               <div class="row-h-10 intro pantry"> <h1><b>Synopsis:</b><h1></div>
               <div class="row-h-70">         
-                <p>Food:fadsfdsfsd </p>
+                <p>This project explores the technical side of human computer interaction; we were tasked with developing a fully functional application that would complete a task. Pantry is a web application that helps users decide what to eat based on ingredients that he/she has. Users will input this infomation in the main pantry page, as will be shown later. </p>
               </div>
 
           
@@ -591,8 +797,17 @@
     <div id="pantry_to_ucsd_gradient"> </div>
 
     <div class="ucsd">
+     <div class="introTitle">UCSD</div>
 
-
+      <div id="parallax5" class="parallax">
+        <div class="shadeOutline">
+          <h1><b>What is UCSD???</b><h1>
+          <p>UCSD stands for <b>Ultra Competitive Sports Division</b> (real cute, I know..). UCSD is an early design for an app idea that would be implemeted in sport arenas. Our goal is to connect the audience through our app.
+          </p>
+          <p> <a href = https://waynephung.github.io/COGS-123/public/index.html> Check out the portfolio for this project: </a> </p>
+        </div>
+        
+      </div> 
 
 
     </div>
@@ -614,8 +829,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>  
   <script type="text/javascript" src="js/main.js"></script>
   <!--JavaScript at end of body for optimized loading (materialize)-->
   <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/rellax.js"></script>
+  
 </html>
