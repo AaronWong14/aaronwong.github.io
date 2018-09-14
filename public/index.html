@@ -693,7 +693,7 @@
             </div>
 
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
-              <div class="slideText">Setting Values For the Data (10/8)</div>
+              <div class="slideText">Setting Benchmark Values For the Data (10/8)</div>
               <p>
               Next, we used the newly normalized values to create a list for each category's average value and standard deviation for every year. Because we are essentially measuring how good a player is, we need to determine the amount of points for each of the 6 categories. We settled for the following:              
               </p>
@@ -709,7 +709,48 @@
             
           </div>
 
-        </div>                      
+        </div> 
+
+         <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Determining a Player's Impact (11/8)</div>
+              <p>
+              Using the weights from above, along with the averages and standard deviation values, we looped through the list of dataframes and calculated the z-values of the normalized distributions for each category. We then combined the weight of each category with the z-value to create an impact value for each player (refer to code for actual equation). As we did this, we created a new row for each category to store the corresponding values. Here are some of the values we calculated - the impact values for every player in 2001.                
+              </p>              
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Average Team Impact (12/8)</div>
+              <p>
+              We then created a dictionary for each season that contains each team's players' individual impacts. Doing this allows us to see the impact distribution of each team, which we can finally analyze. We can determine the average impact of each team, as well as the standard deviation of impact (what our hypothesis is based on). We calculate these values using the "mean" and the "std" functions as we loop through each team and add these values to the dictionary. Here is the average impact for each team in 2000.               
+              </p>              
+            </div>
+            
+          </div>
+
+        </div>  
+
+
+
+
+            
 
            
 
@@ -724,7 +765,13 @@
           <span class="nbaPyDot" onclick="nbaPySlide(2)">2</span>  
           <span class="nbaPyDot" onclick="nbaPySlide(3)">3</span>
           <span class="nbaPyDot" onclick="nbaPySlide(4)">4</span>
-          <span class="nbaPyDot" onclick="nbaPySlide(5)">5</span>         
+          <span class="nbaPyDot" onclick="nbaPySlide(5)">5</span>
+          <span class="nbaPyDot" onclick="nbaPySlide(6)">6</span> 
+          <span class="nbaPyDot" onclick="nbaPySlide(7)">7</span> 
+          <span class="nbaPyDot" onclick="nbaPySlide(8)">8</span> 
+          <span class="nbaPyDot" onclick="nbaPySlide(9)">9</span> 
+          <span class="nbaPyDot style2" onclick="nbaPySlide(10)">10</span> 
+          <span class="nbaPyDot style2" onclick="nbaPySlide(11)">11</span>          
         </div> 
 
       </div> <!-- END SLIDESHOW -->
