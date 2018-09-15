@@ -538,7 +538,7 @@
               <div class="slideText">Question and Hypothesis (1/8)</div>
               <p><b>Research Question:</b> What makes a 21st century NBA team good? With 30 teams, we define a “good” team as one that finishes within the top 8 in regards to number of wins (during the regular season). Due to their success in the regular season, these good teams are most likely to be the most successful in the NBA playoffs.
               <p>
-              <p><b>Hypothesis:</b> We believe that the defining characteristic of a good NBA team will be those with a higher average impact across its players, with the least amount of variance between players. Impact will be defined as the sum of the weighted factors of points, rebounds, assists, blocks, steals, and turnovers per game for each player in one team. All 6 of these factors will be weighed based on how they affect teams in scoring and/or preventing opposing teams from scoring.
+              <p><b>Hypothesis:</b> We believe that the defining characteristic of a good NBA team will be those with a higher average impact across its players, with the least amount of variance between players (lower standard deviation). Impact will be defined as the sum of the weighted factors of points, rebounds, assists, blocks, steals, and turnovers per game for each player in one team. All 6 of these factors will be weighed based on how they affect teams in scoring and/or preventing opposing teams from scoring.
               </p>               
             </div>
             
@@ -719,9 +719,9 @@
             </div>
 
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
-              <div class="slideText">Determining a Player's Impact (11/8)</div>
+              <div class="slideText">Average Team Impact and Standard Deviation Impact I (11/8)</div>
               <p>
-              Using the weights from above, along with the averages and standard deviation values, we looped through the list of dataframes and calculated the z-values of the normalized distributions for each category. We then combined the weight of each category with the z-value to create an impact value for each player (refer to code for actual equation). As we did this, we created a new row for each category to store the corresponding values. Here are some of the values we calculated - the impact values for every player in 2001.                
+              Using the weights from above, along with the averages and standard deviation values, we looped through the list of dataframes and calculated the z-values of the normalized distributions for each category. We then combined the weight of each category with the z-value to create an impact value for each player (refer to code for actual equation). As we did this, we created a new row for each category to store the corresponding values. We then created a dictionary for each season that contains each team's players' individual impacts. Doing this allows us to see the impact distribution of each team, which we can finally analyze. Here are some of the values we calculated - the impact values for every player in 2001.                
               </p>              
             </div>
             
@@ -737,9 +737,29 @@
             </div>
 
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
-              <div class="slideText">Average Team Impact (12/8)</div>
+              <div class="slideText">Average Team Impact and Standard Deviation Impact II (12/8)</div>
               <p>
-              We then created a dictionary for each season that contains each team's players' individual impacts. Doing this allows us to see the impact distribution of each team, which we can finally analyze. We can determine the average impact of each team, as well as the standard deviation of impact (what our hypothesis is based on). We calculate these values using the "mean" and the "std" functions as we loop through each team and add these values to the dictionary. Here is the average impact for each team in 2000.               
+              We can determine the average impact of each team, as well as the standard deviation of impact (what our hypothesis is based on). We calculate these values using the "mean" and the "std" functions as we loop through each team and add these values to the dictionary. We will then append  the average impact and standard deviation of impact values to new columns in the list like so.<b> NOTE: <ul>Average Team Impact</ul> refers to how the well the team does as a whole. In this case, a high average team impact means the team recorded better stats than the rest of the league. This number will most likely be positive since 5 stats grant a positive value (points, rebounds, assists, steals, blocks), with turnovers being the only negative value. <ul>Standard Deviation Impact</ul> refers to how spread out the team's stats were; essentially the gap between skill levels. A high standard deviation impact implies that a few players within the team stand out amongst the rest of the team while a lower standard deviation implies that a lot of players on the team are around the same skill level.</b>               
+              </p>              
+            </div>
+            
+          </div>
+
+        </div> 
+
+        
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Average Team Impact and Individual Team Impact III (13/8)</div>
+              <p>
+              We created bar graphs that display the average player impact vs team rank for each year from 2000 to 2016. Average player impact rating is displayed on the y-axis, with rank, as defined earlier as the top 8 teams in the regular season by win count, on the x-axis. So, the first (leftmost) bar for above the number “1” shows the data for the highest ranked team, and last the bar above the number “29” shows the data for the lowest ranked (last) team. For each of these years, we also created graphs that displayed the standard deviation of average player impact vs team rank for each of these years. In these graphs, we have displayed standard deviation on the y-axis, and rank on x-axis. So, we have 2 graphs for each year.             
               </p>              
             </div>
             
@@ -747,10 +767,78 @@
 
         </div>  
 
+        <div class="nbaPySlides fade">
+          <div class="row">           
 
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
 
-
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Visualizing the Data use Scatterplots (14/8)</div>
+              <p>
+              After creating the two graphs for each year, we realized that we couldn’t just look at these graphs to see any trends on how average player impact and standard deviation of impact together are correlated with team rank. So, we created scatter plots to better see the relationship between the data. On the y-axis we now have the numbers for both standard deviation and average impact, and on the x-axis we had the total number of team wins for that particular season. Points in blue show the average player impact related to team wins, while points in red show standard deviation related to team wins. What we will be looking for is a positive correlation, which will show that higher average player impact or team standard deviation of impact will lead to more wins. Here is the scatterplot for 2000.       
+              </p>              
+            </div>
             
+          </div>
+
+        </div> 
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Calculations (14/8)</div>
+              <p>
+              Using python to calculate the Pearson correlation coefficient (denoted as r) to calculate the correlation of both samples. The average correlation for average impact vs number of wins was r = 0.417063414287, while the average correlation for standard deviation vs number of wins was r = 0.599756592385. For an alpha value of 0.05, with 28 degrees of freedom (30 teams subtracted by 2), the critical r value was that our values needed to pass was 0.361 (from the Pearson's critical value table). Both of our r values were greater than this critical value, and so we are able to determine that both of these correlations were significant.
+              </p>              
+            </div>
+            
+          </div>
+
+        </div>
+
+        <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText">Results (15/8)</div>
+              <p>
+              This significance allows us to conclude that in general, teams that win more games (and so are higher ranked) tend to have a higher average impact as well as a higher standard deviation of impact. Although the higher average player impact matches our initial assumption, <u>our actual hypothesis was ultimately incorrect</u>. We also hypothesized that there would be low variance of average player impact between players, but our results seemed to show otherwise. As standard deviation of impact was positively correlated with number of wins (and this correlation was significant), we can see how this variance in fact tends to be higher for good teams.
+              </p>             
+            </div>
+            
+          </div>
+
+        </div> 
+
+         <div class="nbaPySlides fade">
+          <div class="row">           
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+              <img src="./img/doItEarlyFinished.png" style="width:100%">                            
+            </div>
+
+            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
+              <div class="slideText" >Understanding Why We Were Wrong (15/8)</div>              
+              <p>
+              Looking at the results, we can understand why teams with higher average player impact will generally do better. On these teams, more players are involved in team success, as more players have an impact on various statistical categories and so are better able to help the team in winning games. With a higher average player impact, these teams embody the idea of basketball being a “team sport” in which all players must contribute in some way for the team to be able to do well, rather than just having one great player.The fact that standard deviation of impact tends to be higher allows us to come to the conclusion that, in general, teams also do need those exceptionally good players. These higher average player impacts for winning teams, we determined, are not only caused by more players being involved, but also by having a few individual players whose average impact is significantly higher than their teammates.To put simply, all players must “step up their games” for their team to do better, but there also must those few players who are really something special. <u>A team effort combined with the presence of all-star caliber players is critical. Both factors must be present simultaneously for teams to be good.</u> In terms of application, NBA teams should invest in a few high caliber players and then invest in younger, potentially cheaper players who have a high upside.
+                           
+              </p>             
+            </div>
+            
+          </div>
+
+        </div>            
 
            
 
