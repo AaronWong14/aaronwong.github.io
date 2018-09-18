@@ -730,6 +730,26 @@ ul{
     text-align: center;
 }
 
+
+
+
+/*EVITE 06A77D*/
+/*----------------------------------------------------
+    BASKETBALL
+-----------------------------------------------------*/
+#ucsd_to_basketball_gradient{
+    background-image: linear-gradient(#FFB92D, #E2711D);
+    height: 25vh;
+    margin-top: -5vh;
+
+}
+
+.basketball{
+   background-color: #E2711D;
+}
+
+
+
 /* ---------------------------------------------------
    	SLIDESHOWS
 ----------------------------------------------------- */
@@ -1062,7 +1082,8 @@ img {
   background-color: rgba(0,0,0,0.8);
 }
 
-.pantry-slideshow-container{   
+.pantry-slideshow-container{ 
+  height: 100vh;  
  /* max-width: 1000px;*/
   position: relative;
   margin: auto;
@@ -1070,6 +1091,70 @@ img {
   margin-left: 4vw;
 
 }
+/* Next & previous buttons */
+.prevPantry, .nextPantry {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  font-size: 7.5vw;
+  margin-top: 0%;
+  width: auto;
+  color: white;
+  font-weight: bold; 
+  transition: 0.6s ease;
+  
+}
+
+/* Position the "next button" to the right */
+.nextPantry {
+  right: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+.prevPantry {
+  left: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevPantry:hover, .nextPantry:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.pantrySlideShowDots{
+    position: absolute; 
+    margin: auto;    
+    bottom: 3vh;    
+    left: 0;
+    right: 0;
+     
+}
+
+.pantryDot { 
+  cursor: pointer;
+  margin: 0 2px;
+  background: #fff;
+  color: white;
+   padding: 1vh .9vw;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: background-color 0.6s ease;
+}
+
+
+.pantrySlideShowDots .active{
+  background-color: #000;
+  text-align:center;
+  
+}
+.pantryDot:active, .pantryDot:hover {
+  background-color: #000;  
+  text-align: center;
+ 
+}
+
+
+
 
 
 /* On smaller screens, decrease text size */
