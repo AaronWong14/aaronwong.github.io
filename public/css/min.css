@@ -49,8 +49,6 @@ html, body {
     transition: all cubic-bezier(0.25,0.1,0.25,1) .25s;
     margin-left: 0rem;
     box-shadow: 0px 0px 30px 10px #32292F;
-   
-
 }
 
 #navbar .brand-logo {
@@ -480,14 +478,14 @@ nav ul a {
 
 #parallax1{
 	background-size: 100%;
-    background-image: url('../img/mainPageWallPaper.jpg');
-    height: 100vh;    	
+  background-image: url('../img/mainPageWallPaper.jpg');
+  height: 100vh;    	
 }
 
 #parallax2{
 	background-image: url('../img/project.jpg');
-    margin-top: -5vh;
-    background-size: 100%;    
+  margin-top: -5vh;
+  background-size: 100%;    
 }
 
 /* Do It Early Parallax */
@@ -541,9 +539,11 @@ nav ul a {
 }
 
 #parallax6{
-    min-height: 40rem;
-    background-size: 90%;
-    background-image: url('../images/largeSketch.JPG');
+    height: 80vh;
+    background-size: 70%;
+    margin-right: 15vw;
+    margin-left: 15vw;
+    background-image: url('../img/nbanba.jpg');
 }
 
 #wireframes {
@@ -721,8 +721,6 @@ ul{
   height: 25vh;
   margin-top: -5vh;   
   background-repeat: no-repeat;
-  
-
 }
 
 .ucsd{
@@ -734,7 +732,13 @@ ul{
     text-align: center;
 }
 
+.btn-warning{
+  background-color: #FFB92D;
+}
 
+.btn-warning:hover{
+  background-color: #E2711D;
+}
 
 
 /*EVITE 06A77D*/
@@ -1111,6 +1115,9 @@ img {
   color: white;
   font-weight: bold; 
   transition: 0.6s ease;
+  bottom: 70vh;
+  margin-left: -2vw;
+  margin-right: -2vw;
   
 }
 
@@ -1161,9 +1168,6 @@ img {
   text-align: center;
  
 }
-
-
-
 
 
 /* On smaller screens, decrease text size */
