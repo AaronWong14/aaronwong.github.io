@@ -754,7 +754,22 @@ ul{
 }
 
 .basketball{
-   background-color: #E2711D;
+  background-color: #E2711D;
+  cursor: context-menu;
+}
+
+#three-container{
+  cursor: context-menu;
+  max-height: 100vh;
+}
+
+.basketball h1{
+  font-size: 6rem;
+}
+
+.basketball .rellax{
+ /* bottom: 690vh;*/
+
 }
 
 
@@ -1160,9 +1175,9 @@ img {
 
 .pantrySlideShowDots .active{
   background-color: #000;
-  text-align:center;
-  
+  text-align:center;  
 }
+
 .pantryDot:active, .pantryDot:hover {
   background-color: #000;  
   text-align: center;
