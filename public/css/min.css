@@ -712,6 +712,11 @@ ul{
     text-align: center;
 }
 
+.pantry .break{
+    margin-bottom: 10vh;
+}
+
+
 
 /*----------------------------------------------------
     UCSD
@@ -768,8 +773,14 @@ ul{
 }
 
 .basketball .rellax{
- /* bottom: 690vh;*/
-
+ /* background-attachment: fixed;*/
+ /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;*/
+    /*margin-top: 5%;*/
+    overflow-x: hidden;
+  
 }
 
 
