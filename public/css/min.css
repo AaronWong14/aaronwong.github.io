@@ -7,7 +7,8 @@ body{
     overflow-x: hidden;
     background-color: #99E1D9;
     color: black;
-    font-family: 'Roboto'
+    font-family: 'Roboto'; 
+
 }
 
 #content {
@@ -35,6 +36,9 @@ a, a:hover, a:focus {
 html, body {
     height:100%;
 } 
+.wrapper{
+  cursor: context-menu;
+}
 /* ---------------------------------------------------
     NAVBAR STYLE AND EXPANSION
 ----------------------------------------------------- */
