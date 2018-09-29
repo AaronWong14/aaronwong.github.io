@@ -148,12 +148,6 @@ $(document).ready(function(){
 
 });
 
-//hide doItEarlySection
-function doItEarlyCollapse(){
-        
-}
-
-
 // function collapseNavbar() {
 //     let navbar = $('#navbar');
 //     let content = $('#content');

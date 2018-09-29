@@ -599,6 +599,10 @@ ul{
 /*---------------------------------------------------
     DOITEARLY
 ---------------------------------------------------*/
+/*smooth scroll */
+#doItEarly{
+  
+}
 
 .doItEarlyHeader{
  margin-top: -70vh;
@@ -720,6 +724,12 @@ ul{
     margin-bottom: 10vh;
 }
 
+.end_Pantry{
+  margin-left: 2vw;
+  margin-right: 2vw;
+  
+}
+
 
 
 /*----------------------------------------------------
@@ -751,6 +761,12 @@ ul{
 
 .btn-warning:hover{
   background-color: #E2711D;
+}
+
+.end_UCSD{
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 5vh;    
 }
 
 
@@ -1242,6 +1258,34 @@ img {
 .prevUCSD:hover, .nextUCSD:hover {
   background-color: rgba(0,0,0,0.8);
 }
+
+/* The dots/bullets/indicators */
+.ucsdDot {
+    cursor: pointer;
+    margin: 0 2px;
+    background: #fff;
+    color: white;
+    padding: 1vh .9vw;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: background-color 0.6s ease;
+}
+
+.ucsdDot:active, .ucsdDot:hover {
+  background-color: #000;
+}
+
+.ucsdSlideShowDots{ 
+  margin-top: -10vw;
+  margin-left: -0.5vw;
+}
+
+.ucsdSlideShowDots .active{
+  background-color: #000;
+  text-align:center;
+  align-content: left;
+}
+
 
 
 
