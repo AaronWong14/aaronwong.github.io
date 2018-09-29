@@ -163,6 +163,18 @@ nav ul a {
     font-size: 2.5rem;
 }
 
+.dropdown-content p { 
+  color: white;
+}
+
+
+.dropdown-content { 
+  margin-top: 5rem !important;
+}
+
+
+
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -601,7 +613,7 @@ ul{
 ---------------------------------------------------*/
 /*smooth scroll */
 #doItEarly{
-  
+
 }
 
 .doItEarlyHeader{
