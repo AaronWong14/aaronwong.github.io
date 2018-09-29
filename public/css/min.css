@@ -741,6 +741,10 @@ ul{
     text-align: center;
 }
 
+.ucsd h1{
+  font-size: 4rem;
+}
+
 .btn-warning{
   background-color: #FFB92D;
 }
@@ -1198,6 +1202,47 @@ img {
   text-align: center;
  
 }
+
+.ucsd-slideshow-container{  
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  margin-right: 5vw;
+  margin-left: 4vw;
+  margin-top: 3vh;
+}
+
+/* Next & previous buttons */
+.prevUCSD, .nextUCSD {
+  cursor: pointer;
+  position: absolute;
+  margin-top: 60%;
+  width: auto;
+  /*padding: 16px;
+  margin-top: -22px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.nextUCSD {
+  right: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+.prevUCSD {
+  left: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevUCSD:hover, .nextUCSD:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
 
 
 /* On smaller screens, decrease text size */
