@@ -240,21 +240,54 @@ function showSlides(dots, slides, n) {
 
 //collapse doItEarly
 function doItEarlyCollapse(){
-
-
     var die = $(".doItEarly");
+    var toggleText = $(".dieToggle");
+    toggleText.css("color", "white");   
     if (die[0].style.display === "none") {
         die.fadeIn({duration: 1000, queue: false});  
         die.animate({marginTop: '+=100vh',duration: 1000, queue: false});             
-        $("#dieToggle").text("Minimize this section"); 
+        toggleText.text("Minimize this section").css("color", "white");     
     } else {
         die.animate({marginTop: '-=100vh', duration:1000, queue: false});
         $(".doItEarly").fadeOut({duration: 1000, queue: false});
-        $("#dieToggle").text("Maximize this section"); 
+        toggleText.text("Maximize this section").css("color", "white");     
     }
-
-
 }
+
+//collapse nbaPy
+function nbaPyCollapse(){
+    var nbaPy = $(".nbaPy");
+    var toggleText = $(".nbaPyToggle");
+    toggleText.css("color", "white");   
+    if (nbaPy[0].style.display === "none") {
+        nbaPy.fadeIn({duration: 1000, queue: false});  
+        nbaPy.animate({marginTop: '+=100vh',duration: 1000, queue: false});             
+        toggleText.text("Minimize this section").css("color", "white");     
+    } else {
+        nbaPy.animate({marginTop: '-=100vh', duration:1000, queue: false});
+        $(".nbaPy").fadeOut({duration: 1000, queue: false});
+        toggleText.text("Maximize this section").css("color", "white");     
+    }
+}
+
+//collapse pantry
+function pantryCollapse(){
+    var pantry = $(".pantry");
+    var toggleText = $(".pantryToggle");
+    toggleText.css("color", "white");   
+
+    if (pantry[0].style.display === "none") {
+        pantry.fadeIn({duration: 1000, queue: false});  
+        pantry.animate({marginTop: '+=100vh',duration: 1000, queue: false});             
+        toggleText.text("Minimize this section").css("color", "white");         
+    } else {
+        pantry.animate({marginTop: '-=100vh', duration:1000, queue: false});
+        pantry.fadeOut({duration: 1000, queue: false});
+        toggleText.text("Maximize this section").css("color", "white");       
+    }
+}
+
+
 
 
 

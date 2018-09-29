@@ -231,12 +231,12 @@
     </div>
 
     <ul id="doItEarlyDrop" class="dropdown-content dropdown-menu">      
-      <li><a href="#doItEarly">DoItEarly</a></li>
-      <li><a href="#doItEarlyIntro">Intro</a></li>
-      <li><a href="#doItEarlyParallax">Image</a></li>
-      <li><a href="#doItEarlyCode">Code</a></li>
+      <li><a href="#doItEarly"><p>DoItEarly</p></a></li>
+      <li><a href="#doItEarlyIntro"><p>Intro</p></a></li>
+      <li><a href="#doItEarlyParallax"><p>Image</p></a></li>
+      <li><a href="#doItEarlyCode"><p>Code</p></a></li>
       <li class="divider"></li>
-      <li onclick="doItEarlyCollapse()"><a id="dieToggle" href="#doItEarly">Minimize this section</a></li>  
+      <li onclick="doItEarlyCollapse()"><a id="dieToggle" href="#doItEarly"><p>Minimize this section</p></a></li>  
     </ul>
 
 
@@ -510,12 +510,23 @@
     <div id="doItEarlyTo_nbapy_gradient"></div>
 
     <!-- nbaPy -->
-    
-    <div class="active nbaPy">  
-      NBApy      
-      <div id="nbaPy"></div>
+    <div class="nbaPyHeader">            
+      <div class="introTitle">NBApy<a class="dropdown-trigger" data-target="nbaPyDrop"><i class="medium material-icons nbaPyDrop">arrow_downward</i></a><div> 
+    </div>
+
+    <ul id="nbaPyDrop" class="dropdown-content dropdown-menu">      
+      <li><a href="#nbaPy"><p>NBApy</p></a></li>
+      <li><a href="#nbaPyIntro"><p>Intro</p></a></li>
+      <li><a href="#nbaPySlideShow"><p>About the project</p></a></li>
+      <li><a href="#nbaPyConclusion"><p>Conclusion</p></a></li>
+      <li class="divider"></li>
+      <li onclick="nbaPyCollapse()"><a id="nbaPyToggle" href="#nbaPy"><p>Minimize this section</p></a></li>  
+    </ul>    
+         
+    <div id="nbaPy"></div>
+    <div class="nbaPy">
       <div id="parallax3" class="parallax">        
-        <div class="row intro nbaPyIntro">
+        <div class="row intro nbaPyIntro" id="nbaPyIntro">
           <div class="text col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center">
             <div class="intro shadeOutline"><h1><b>Synopsis:</b><h1></div>
             <div class="shadeOutline">
@@ -529,77 +540,62 @@
       </div>
 
       <!-- https://github.com/seemethere/nba_py -->
-      <div class="row nbaPy-slideshow-container"> 
+      <div class="row nbaPy-slideshow-container" id="nbaPySlideShow"> 
 
         <div class="nbaPySlides slide1 fade">
-          <div class="row">           
-
-            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+          <div class="row">
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy1.jpg" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Question and Hypothesis (1/17)</div>
               <p><b>Research Question:</b> What makes a 21st century NBA team good? With 30 teams, we define a “good” team as one that finishes within the top 8 in regards to number of wins (during the regular season). Due to their success in the regular season, these good teams are most likely to be the most successful in the NBA playoffs.
               <p>
               <p><b>Hypothesis:</b> We believe that the defining characteristic of a good NBA team will be those with a higher average impact across its players, with the least amount of variance between players (lower standard deviation). Impact will be defined as the sum of the weighted factors of points, rebounds, assists, blocks, steals, and turnovers per game for each player in one team. All 6 of these factors will be weighed based on how they affect teams in scoring and/or preventing opposing teams from scoring.
               </p>               
-            </div>
-            
+            </div>            
           </div>
         </div>
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
+          <div class="row">
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy2.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">API (2/17)</div>
               <p>
               We found a very helpful API called nba_py that would scrape and organize data from nba.com. Here is an example of a class within the API called TeamStats. The constructor will initialize a TeamStats object, first with default data from the constants file. This object contains some important fields we will want to use later such as "rank." In order to actually instantiate a TeamStats object with useful data, we can input some parameters from the self.JSON section. For example: TeamStats(team_id = 1610612737, season ='2000-01').overall() will essentially scrape data from a specific basketball team (the Atlanta Hawks) from a specific season (2000-2001 season).
               </p>               
-            </div>
-            
+            </div>            
           </div>
-
         </div> 
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
+          <div class="row"> 
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy3.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Scraping the data for each player in each season (3/17)</div>
               <p>
                After we had imported all the data, we split certain parts of the available data in certain ways so that we could more efficiently use it the way we wanted to. We first grouped the data into dataframes for all of the individual players’ stats from each season. We had one dataframe for each season from 2000 to 2016, which included all the players in the entire NBA league, as well as many player statistics apart from the six that we were going use to calculate impact. These other statistics included age, games won and lost, rankings for each statistic, and even number of fantasy points, amongst others.
               </p>               
-            </div>
-            
+            </div>            
           </div>
-
         </div>
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
-            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+          <div class="row">
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy4.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Scraping the Data for Each Team for Each Season (4/17)</div>
               <p> After organizing the individual player data, we organized the team data. For each year, we organized each team’s roster for each year into a dataframe. For example, from the year 2000, we had 30 rosters, 1 for each of the 30 NBA teams. We repeated this process to obtain all the rosters from 2000 to 2016, a grand total of 510 rosters. Now after this initial organizing, our data was grouped in ways that would make it a lot easier to call on in our cleaning stage.
               </p>               
-            </div>
-            
+            </div>            
           </div>
-
         </div> 
 
          <div class="nbaPySlides fade">
@@ -690,12 +686,10 @@
         </div>
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
-            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+          <div class="row">
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy10.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Setting Benchmark Values For the Data (10/17)</div>
               <p>
@@ -709,37 +703,29 @@
                 <li><u>Assists</u> are worth 2.3, as they always lead to a score and so they are the opposite of blocks.</li>
                 <li><u>Turnovers</u> are worth -1.8, as they are the opposite of steals.</li> 
               </p>              
-            </div>
-            
+            </div>            
           </div>
-
         </div> 
 
          <div class="nbaPySlides fade">
-          <div class="row">           
-
-            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+          <div class="row">
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy11.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Average Team Impact and Standard Deviation Impact I (11/17)</div>
               <p>
               Using the weights from above, along with the averages and standard deviation values, we looped through the list of dataframes and calculated the z-values of the normalized distributions for each category. We then combined the weight of each category with the z-value to create an impact value for each player (refer to code for actual equation). As we did this, we created a new row for each category to store the corresponding values. We then created a dictionary for each season that contains each team's players' individual impacts. Doing this allows us to see the impact distribution of each team, which we can finally analyze. Here are some of the values we calculated - the impact values for every player in 2001.                
               </p>              
-            </div>
-            
+            </div>            
           </div>
-
         </div>
 
         <div class="nbaPySlides slide12 fade">
-          <div class="row">           
-
+          <div class="row">
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy12.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Average Team Impact and Standard Deviation Impact II (12/17)</div>
               <p>
@@ -747,102 +733,78 @@
               <p><b>
               <ul>Standard Deviation Impact</ul> refers to how spread out the team's stats were; essentially the gap between skill levels. A high standard deviation impact implies that a few players within the team stand out amongst the rest of the team while a lower standard deviation implies that a lot of players on the team are around the same skill level.</b>               
               </p>              
-            </div>
-            
+            </div>            
           </div>
-
-        </div> 
-
-        
+        </div>         
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
+          <div class="row">
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy13.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Average Team Impact and Individual Team Impact III (13/17)</div>
               <p>
               We created bar graphs that display the average player impact vs team rank for each year from 2000 to 2016. Average player impact rating is displayed on the y-axis, with rank, as defined earlier as the top 8 teams in the regular season by win count, on the x-axis. So, the first (leftmost) bar for above the number “1” shows the data for the highest ranked team, and last the bar above the number “29” shows the data for the lowest ranked (last) team. For each of these years, we also created graphs that displayed the standard deviation of average player impact vs team rank for each of these years. In these graphs, we have displayed standard deviation on the y-axis, and rank on x-axis. So, we have 2 graphs for each year.             
               </p>              
-            </div>
-            
+            </div>            
           </div>
-
         </div>  
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
-            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+          <div class="row">
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy14.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Visualizing the Data use Scatterplots (14/17)</div>
               <p>
               After creating the two graphs for each year, we realized that we couldn’t just look at these graphs to see any trends on how average player impact and standard deviation of impact together are correlated with team rank. So, we created scatter plots to better see the relationship between the data. On the y-axis we now have the numbers for both standard deviation and average impact, and on the x-axis we had the total number of team wins for that particular season. Points in blue show the average player impact related to team wins, while points in red show standard deviation related to team wins. What we will be looking for is a positive correlation, which will show that higher average player impact or team standard deviation of impact will lead to more wins. Here is the scatterplot for 2000.       
               </p>              
-            </div>
-            
+            </div>            
           </div>
-
         </div> 
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
-            <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
+          <div class="row">
+              <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy15.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Calculations (15/17)</div>
               <p>
               Using python to calculate the Pearson correlation coefficient (denoted as r) to calculate the correlation of both samples. The average correlation for average impact vs number of wins was r = 0.417063414287, while the average correlation for standard deviation vs number of wins was r = 0.599756592385. For an alpha value of 0.05, with 28 degrees of freedom (30 teams subtracted by 2), the critical r value was that our values needed to pass was 0.361 (from the Pearson's critical value table). Both of our r values were greater than this critical value, and so we are able to determine that both of these correlations were significant.
               </p>              
-            </div>
-            
+            </div>            
           </div>
-
         </div>
 
         <div class="nbaPySlides fade">
-          <div class="row">           
-
+          <div class="row">
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy16.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText">Results (16/17)</div>
               <p>
               This significance allows us to conclude that in general, teams that win more games (and so are higher ranked) tend to have a higher average impact as well as a higher standard deviation of impact. Although the higher average player impact matches our initial assumption, <u>our actual hypothesis was ultimately incorrect</u>. We also hypothesized that there would be low variance of average player impact between players, but our results seemed to show otherwise. As standard deviation of impact was positively correlated with number of wins (and this correlation was significant), we can see how this variance in fact tends to be higher for good teams.
               </p>             
-            </div>
-            
+            </div>            
           </div>
-
         </div> 
 
-         <div class="nbaPySlides fade">
-          <div class="row">           
-
+        <div class="nbaPySlides fade">
+          <div class="row">
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-left nbaPySlidesImg">             
               <img src="./img/nbaPy17.png" style="width:100%">                            
             </div>
-
             <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-right nbaPySlidesText">
               <div class="slideText" >Understanding Why We Were Wrong (17/17)</div>              
               <p>
               Looking at the results, we can understand why teams with higher average player impact will generally do better. On these teams, more players are involved in team success, as more players have an impact on various statistical categories and so are better able to help the team in winning games. With a higher average player impact, these teams embody the idea of basketball being a “team sport” in which all players must contribute in some way for the team to be able to do well, rather than just having one great player.The fact that standard deviation of impact tends to be higher allows us to come to the conclusion that, in general, teams also do need those exceptionally good players. These higher average player impacts for winning teams, we determined, are not only caused by more players being involved, but also by having a few individual players whose average impact is significantly higher than their teammates. To put simply, all players must “step up their games” for their team to do better, but there also must those few players who are really something special. <u>A team effort combined with the presence of all-star caliber players is critical. Both factors must be present simultaneously for teams to be good.</u> In terms of application, NBA teams should invest in a few high caliber players and then invest in younger, potentially cheaper players who have a high upside.                           
               </p>             
-            </div>
-            
+            </div>              
           </div>
-
         </div>          
 
         <a class="rowSSprev">&#10094;</a>
@@ -866,28 +828,38 @@
           <span class="nbaPyDot style2" onclick="nbaPySlide(14)">14</span>   
           <span class="nbaPyDot style2" onclick="nbaPySlide(15)">15</span>   
           <span class="nbaPyDot style2" onclick="nbaPySlide(16)">16</span>   
-          <span class="nbaPyDot style2" onclick="nbaPySlide(17)">17</span>   
-
+          <span class="nbaPyDot style2" onclick="nbaPySlide(17)">17</span>
         </div> 
 
       </div> <!-- END SLIDESHOW -->
 
-      <div class="end_nbaPy active">
+      <div class="end_nbaPy active" id="nbaPyConclusion">
         <h2>The Take Away</h2>
         <p>
         Saying that this data science project was a good learning experience would be an understatement. Prior to this, I have never seen anything like this before, not in any class, nor on anyone else's portfolio. Coming back to this project, it took a while for me to relearn all the science. We answered a very simple question, yet the research behind it was enormous; it made me realize how we sometimes take information for granted: it may take years just to answer a very simple question. If I were to recreate this entire project solo, it would take many months to fill in the roles of my teammates. 
         </p>
       </div>
-
-
     </div>
-    <!-- END NBAPY --> 
+
+    </div> <!-- END NBAPY --> 
 
     <div id="nbaPy_To_Pantry_gradient"></div>
 
     <!-- pantry -->
-    <div class="active pantry">
-      <div class="pantryIntroText">Pantry</div>
+    <div class="pantryHeader">            
+      <div class="introTitle">Pantry<a class="dropdown-trigger" data-target="pantryDrop"><i class="medium material-icons nbaPyDrop">arrow_downward</i></a><div> 
+    </div>
+
+    <ul id="pantryDrop" class="dropdown-content dropdown-menu">      
+      <li><a href="#pantry"><p>Pantry</p></a></li>
+      <li><a href="#pantryAbout"><p>About the project</p></a></li>
+      <li><a href="#pantryTechnical"><p>The technical Side</p></a></li>
+      <li><a href="#pantryConclusion"><p>Conclusion</p></a></li>
+      <li class="divider"></li>
+      <li onclick="pantryCollapse()"><a id="pantryToggle" href="#pantry"><p>Minimize this section</p></a></li>  
+    </ul>  
+
+    <div class="active pantry">      
       <div id="pantry"></div>
       <div class="row intro PantryIntro">      
           <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center">
