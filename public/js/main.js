@@ -207,8 +207,8 @@ var ucsdSlideIndex = 1;
 var uSlides = $(".ucsdSlides");
 var uDots = $(".ucsdSlideShowDots .ucsdDot");
 showSlides(uDots, uSlides, ucsdSlideIndex);
-function pantrySlide(n){
-    showSlides(uDots, uSlides, ucsdSlideIndex = n);
+function ucsdSlide(n){
+    showSlides(uDots, uSlides, ucsdSlideIndex = n);   
 }
 //*
 
@@ -241,7 +241,7 @@ function showSlides(dots, slides, n) {
 //collapse doItEarly
 function doItEarlyCollapse(){
     var die = $(".doItEarly");
-    var toggleText = $(".dieToggle");
+    var toggleText = $("#dieToggle");
     toggleText.css("color", "white");   
     if (die[0].style.display === "none") {
         die.fadeIn({duration: 1000, queue: false});  
@@ -257,13 +257,15 @@ function doItEarlyCollapse(){
 //collapse nbaPy
 function nbaPyCollapse(){
     var nbaPy = $(".nbaPy");
-    var toggleText = $(".nbaPyToggle");
+    var toggleText = $("#nbaPyToggle");
     toggleText.css("color", "white");   
     if (nbaPy[0].style.display === "none") {
+        toggleText.css("color", "white");   
         nbaPy.fadeIn({duration: 1000, queue: false});  
         nbaPy.animate({marginTop: '+=100vh',duration: 1000, queue: false});             
         toggleText.text("Minimize this section").css("color", "white");     
     } else {
+        toggleText.css("color", "white");   
         nbaPy.animate({marginTop: '-=100vh', duration:1000, queue: false});
         $(".nbaPy").fadeOut({duration: 1000, queue: false});
         toggleText.text("Maximize this section").css("color", "white");     
@@ -273,7 +275,7 @@ function nbaPyCollapse(){
 //collapse pantry
 function pantryCollapse(){
     var pantry = $(".pantry");
-    var toggleText = $(".pantryToggle");
+    var toggleText = $("#pantryToggle");
     toggleText.css("color", "white");   
 
     if (pantry[0].style.display === "none") {
@@ -283,6 +285,23 @@ function pantryCollapse(){
     } else {
         pantry.animate({marginTop: '-=100vh', duration:1000, queue: false});
         pantry.fadeOut({duration: 1000, queue: false});
+        toggleText.text("Maximize this section").css("color", "white");       
+    }
+}
+
+//collapse ucsd
+function ucsdCollapse(){
+    var ucsd = $(".ucsd");
+    var toggleText = $("#ucsdToggle");
+    toggleText.css("color", "white");   
+
+    if (ucsd[0].style.display === "none") {
+        ucsd.fadeIn({duration: 1000, queue: false});  
+        ucsd.animate({marginTop: '+=100vh',duration: 1000, queue: false});             
+        toggleText.text("Minimize this section").css("color", "white");         
+    } else {
+        ucsd.animate({marginTop: '-=100vh', duration:1000, queue: false});
+        ucsd.fadeOut({duration: 1000, queue: false});
         toggleText.text("Maximize this section").css("color", "white");       
     }
 }
