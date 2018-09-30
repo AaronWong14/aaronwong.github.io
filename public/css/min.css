@@ -557,11 +557,17 @@ nav ul a {
 }
 
 #parallax6{
-    height: 80vh;
-    background-size: 70%;
-    margin-right: 15vw;
-    margin-left: 15vw;
+    height: 70vh;
+    background-size: 90%;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    /*margin-bottom: 10vh;*/
     background-image: url('../img/nbanba.jpg');
+}
+
+#parallax7{
+    height: 100vh;    
+    background-image: url('../img/nbaPy1.jpg');
 }
 
 #wireframes {
@@ -572,11 +578,7 @@ nav ul a {
     transform: rotate(90deg);
 } */
 
-#parallax7 {
-    min-height: 40rem;
-    background-size: 90%;
-    background-image: url('../images/resultsFeedback.png');
-}
+
 
 .link{
 	color: blue;
@@ -857,6 +859,12 @@ ul{
     cursor: context-menu;
 }
 
+#parallax6 h1{
+  align-content: center;
+  align-self: center;
+  margin-bottom: 3vh;
+}
+
 .basketball{
   background-color: #E2711D;
   cursor: context-menu;
@@ -867,9 +875,31 @@ ul{
   max-height: 100vh;
 }
 
+
+.basketball #parallax6 .shadeOutline{
+  position: relative;
+  margin-top: -25vh;
+}
+
 .basketball h1{
   font-size: 6rem;
+  margin-bottom: 30vh;
 }
+.basketball .intro p {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.basketball p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.basketball .row{
+  margin-bottom: 0px;
+}
+
+
 
 .basketball .rellax{
  /* background-attachment: fixed;*/
@@ -1353,6 +1383,7 @@ img {
 
 .ucsdSlideShowDots{  
   margin-left: -0.5vw;
+  margin-top: -15vh;
 }
 
 .ucsdSlideShowDots .active{
@@ -1361,6 +1392,19 @@ img {
   align-content: left;
 }
 
+.bball-slideshow-container{
+  position: relative;
+  margin-top: 15vw;
+  height: 100vh;
+}
+
+.bballSlidesImg{
+  left: -5vw;
+
+}
+.bballSlidesText{
+  margin-top: -50vh;
+}
 
 
 
