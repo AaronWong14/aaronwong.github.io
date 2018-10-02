@@ -566,6 +566,7 @@ nav ul a {
 }
 
 #parallax7{
+    width: 100%;
     height: 100vh;    
     background-image: url('../img/nbaPy1.jpg');    
 }
@@ -651,9 +652,14 @@ ul{
     height: 100vh;
 }
 
-.doItEarly p{
+.do-it-early-findings-slideshow-container p{
     position: absolute;
     width: 100%;   
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.doItEarly p{    
     font-size: 1.2rem;
     text-align: center;
 }
@@ -1375,7 +1381,8 @@ img {
 }
 
 /* The dots/bullets/indicators */
-.ucsdDot {    
+.ucsdDot {   
+    z-index: 100; 
     cursor: pointer;
     margin: 0 2px;
     background: #fff;
@@ -1386,12 +1393,13 @@ img {
     transition: background-color 0.6s ease;
 }
 
-.ucsdDot:active, .ucsdDot:hover {
+.ucsdDot:active, .ucsdDot:hover {  
   background-color: #000;
   cursor: pointer;
 }
 
 .ucsdSlideShowDots{  
+  z-index: 100;
   margin-left: -0.5vw;
   margin-top: -15vh;
 }
@@ -1423,12 +1431,24 @@ img {
   font-size: 3vw;
 }
 
-.bballDot { 
+.bballDot{ 
   cursor: pointer;
   margin: 0 .75vw;
   background: #fff;
-  color: white;
+  color: black;
   padding: 1vh .9vw;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: background-color 0.6s ease;
+
+}
+
+.bballDot2{ 
+  cursor: pointer;
+  margin: 0 2px;
+  background: #fff;
+  color: black;
+  padding: 1vh .55vw;
   border-radius: 50%;
   font-size: 1.3rem;
   transition: background-color 0.6s ease;
@@ -1441,24 +1461,26 @@ img {
     margin: auto;    
     bottom: 3vh;    
     left: 0;
-    right: 0;
-     
+    right: 0;     
 }
 
 
 
-.bballDots .active{
+.bballSlideShowDots .active{
   background-color: #000;
-  text-align:center;
+  color: #fff;
+  text-align: center;
   
 }
 .bballDot:active, .bballDot:hover {
   background-color: #000;  
+  color: #fff;
   text-align: center;
 } 
 
 
 .prevBball, .nextBball {
+  z-index: 3;
   cursor: pointer;
   position: absolute;
   width: auto;
@@ -1488,7 +1510,8 @@ img {
 }
 
 .prevBball:hover, .nextBball:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: black;
+
 }
 
 

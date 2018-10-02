@@ -127,7 +127,7 @@ $(document).ready(function(){
 
     //*/
 
-     //for ucsd
+    //for ucsd
     $(".ucsd-slideshow-container .nextUCSD").click(function(){
         if(ucsdSlideIndex == $(".ucsdSlides").length)
             showSlides($(".ucsdSlideShowDots .ucsdDot"), $(".ucsdSlides"), ucsdSlideIndex = 1);
@@ -143,6 +143,23 @@ $(document).ready(function(){
     });
 
     //*/
+
+    //for bball
+    $(".bball-slideshow-container .nextBball").click(function(){
+        if(bballSlideIndex == $(".bballSlides").length)
+            showSlides($(".bballSlideShowDots .bballDot"), $(".bballSlides"), bballSlideIndex = 1);
+        else
+            showSlides($(".bballSlideShowDots .bballDot"), $(".bballSlides"), bballSlideIndex += 1);
+    });
+
+    $(".bball-slideshow-container .prevBball").click(function(){
+        if(bballSlideIndex == 1)
+            showSlides($(".bballSlideShowDots .bballDot"), $(".bballSlides"), bballSlideIndex = $(".bballSlides").length);
+        else
+            showSlides($(".bballSlideShowDots .bballDot"), $(".bballSlides"), bballSlideIndex -= 1);
+    });
+    //*/
+
 
 
 
@@ -209,6 +226,16 @@ var uDots = $(".ucsdSlideShowDots .ucsdDot");
 showSlides(uDots, uSlides, ucsdSlideIndex);
 function ucsdSlide(n){
     showSlides(uDots, uSlides, ucsdSlideIndex = n);   
+}
+//*
+
+//for bball
+var bballSlideIndex = 1;
+var bSlides = $(".bballSlides");
+var bDots = $(".bballSlideShowDots .bballDot");
+showSlides(bDots, bSlides, bballSlideIndex);
+function bballSlide(n){
+    showSlides(bDots, bSlides, bballSlideIndex = n);   
 }
 //*
 
