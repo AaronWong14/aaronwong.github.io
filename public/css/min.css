@@ -1413,7 +1413,14 @@ img {
 
 }
 .bballSlidesText{
-  margin-top: -50vh;
+  margin-top: -44vh;
+}
+
+.bball-slideshow-container img{
+  margin-top: -15vh;
+}
+.bball-slideshow-container .slideText{
+  font-size: 3vw;
 }
 
 .bballDot { 
@@ -1421,7 +1428,7 @@ img {
   margin: 0 .75vw;
   background: #fff;
   color: white;
-   padding: 1vh .9vw;
+  padding: 1vh .9vw;
   border-radius: 50%;
   font-size: 1.3rem;
   transition: background-color 0.6s ease;
@@ -1448,9 +1455,10 @@ img {
 .bballDot:active, .bballDot:hover {
   background-color: #000;  
   text-align: center;
- 
-}
-.bballPrev, .bballNext {
+} 
+
+
+.prevBball, .nextBball {
   cursor: pointer;
   position: absolute;
   width: auto;
@@ -1462,18 +1470,32 @@ img {
   transition: 0.6s ease;
   
 }
-.bballNext {
-  right: -4vw;
+
+.nextBball {
+  position: absolute;
+  right: 8vw;
+  bottom: 2vh;
   border-radius: 3px 0 0 3px;
+  color: white !important;
 }
 
-.bballPrev {
-  left: -4vw;
+.prevBball {
+  position: absolute;
+  left: 8vw;
+  bottom: 2vh;
   border-radius: 3px 0 0 3px;
+  color: white !important;
 }
-.bballPrev:hover, .bballNext:hover {
+
+.prevBball:hover, .nextBball:hover {
   background-color: rgba(0,0,0,0.8);
 }
+
+
+
+
+
+
 
 
 
