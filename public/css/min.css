@@ -876,6 +876,7 @@ ul{
 .basketball{
   background-color: #E2711D;
   cursor: context-menu;
+  color: white;
 }
 
 #three-container{
@@ -889,10 +890,8 @@ ul{
   margin-top: -25vh;
 }
 
-.basketball h1{
-  font-size: 6rem;
-  margin-bottom: 30vh;
-}
+
+
 .basketball .intro p {
   margin-left: 2vw;
   margin-right: 2vw;
@@ -927,6 +926,25 @@ ul{
 .end_Basketball p{
   margin-bottom: 0;
 }
+
+.basketball h1{
+  font-size: 6vh;
+  color: white;
+  margin-top: -25vh;
+  margin-bottom: 20vh;
+}
+
+/* ---------------------------------------------------
+    CARS
+----------------------------------------------------- */
+#basketball_to_cars_gradient{  
+  background-image: linear-gradient(#E2711D, #ff2700);
+  height: 25vh;
+  margin-top: -5vh;
+  background-repeat: no-repeat;
+  cursor: context-menu;
+}
+
 
 
 
