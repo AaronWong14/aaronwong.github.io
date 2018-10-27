@@ -300,12 +300,7 @@ nav ul a {
     padding: 15% 7.5%;
 }
 
-/*#parallax1, #parallax2, #parallax2-1, #parallax3, #parallax4, #parallax5, #parallax6, #parallax7 {
-    position: relative;
-    margin-top: 5%;
-    padding: 15% 7.5%;
-}
-*/
+
 #parallax1 .shadeOutline{
     background-color: rgba(255,255,255,.7);
     color: black;
@@ -561,6 +556,7 @@ nav ul a {
     background-size: 90%;
     margin-right: 5vw;
     margin-left: 5vw;
+    margin-top: 20vh;
     /*margin-bottom: 10vh;*/
     background-image: url('../img/nbanba.jpg');
 }
@@ -858,7 +854,8 @@ ul{
 .end_UCSD{
   margin-left: 2vw;
   margin-right: 2vw;
-  margin-top: 5vh;    
+  margin-top: 5vh;   
+  padding-bottom: 10vh; 
 }
 
 
@@ -1560,8 +1557,24 @@ img {
 }
 
 
+/* ---------------------------------------------------
+    Interests Page
+----------------------------------------------------- */
 
+#interestsParallax{
+    height: 100vh;
+    background-image: url('../img/interestsWallpaper.jpg');   
+}
 
+#interestsParallax1{
+    background-size: 100%;
+    background-image: url('../img/mainPageWallPaper.jpg');
+    height: 70vh;        
+}
+
+#interestsParallax1 .shadeOutline{
+    width: 80%;     
+}
 
 
 

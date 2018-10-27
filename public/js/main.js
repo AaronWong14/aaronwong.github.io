@@ -46,6 +46,18 @@ $(document).ready(function(){
         });
     });
 
+    // document.querySelectorAll('a[href^="./interests.html#"]').forEach(anchor => {
+    //     window.open('interests.html');
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // });
+
+
+
 
     //open projects
     // let projectDrop = $('#projectDropdown');
@@ -229,18 +241,6 @@ function ucsdSlide(n){
 }
 //*
 
-//for bball
-var bballSlideIndex = 1;
-var bSlides = $(".bballSlides");
-var bDots = $(".bballSlideShowDots .bballDot");
-showSlides(bDots, bSlides, bballSlideIndex);
-function bballSlide(n){
-    showSlides(bDots, bSlides, bballSlideIndex = n);   
-}
-//*
-
-
-
 
 //
 
@@ -332,25 +332,4 @@ function ucsdCollapse(){
         toggleText.text("Maximize this section").css("color", "white");       
     }
 }
-
-
-
-
-
-
-
-// function collapseSidebar2() {
-//     let sidebar = $('#sidebar');
-//     let content = $('#content');
-//     let sidebarCollapse = $('#sidebarCollapse');
-//     let menu = $('#menu');
-//     sidebar.addClass('active');
-//     sidebarCollapse.removeClass('active');
-//     content.addClass('active');
-//     menu.removeClass('fa fa-times').addClass('fa fa-bars');
-// }
-
-
-
-
 

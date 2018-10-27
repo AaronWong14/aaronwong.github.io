@@ -1,73 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
-  <title>About Me</title>
-
+<head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <meta name="description" content="Portfolio Website">
-  <meta name="author" content="Aaron Wong"> 
- 
-  <!-- API CSS -->   
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
-  <script src="/bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script> 
-  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">    
-  <link href="/css/bootstrap-reboot.css" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/skeleton.css" rel="stylesheet">  
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="css/bootstrap.css" rel="stylesheet">  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Latest Version of Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Font Awesome Icons & CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/min.css">
+
+  <title>Interests</title>
+</head>
+
+<body>
+<div class="wrapper">
+
+  <nav class ="active row" id ="navbar">
+    <div id="navbar" class="nav-wrapper">
+      <li class="brand-logo"><i class="material-icons left icon">person</i>Aaron Wong</li>
+      <ul class="right hide-on-med-and-down row">
+        <li><a href="./index.html"><i class="material-icons left icon">home</i>Back to Home</a></li>
+        <li><a href="#Basketball"><i class="material-icons left icon">person_pin_circle</i>Basketball</a></li>       
+        <li><a class="dropdown-trigger"><i class="material-icons left icon">phonelink</i>Cars<i class="material-icons right icon">arrow_drop_down</i></a></li>          
+        <li><a class="dropdown-trigger"><i class="material-icons left icon">polymer</i>Music<i class="material-icons right icon">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <button type="button" id="navbarCollapse">
+     <i class="medium material-icons">queue</i>
+  </button>
 
 
-
-  <!--My CSS-->
-  <link href="css/min.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/interests.css">
-   
-  
-  </head>
-
-<body> 
-
-  <center>
-    <h1>Interests</h1>
-  </center>
-
- <div class="row justify-content-between">
-
-    <div class="col-2.col-4">  
-      <a href="index.html" class="anchorLink"><h3>Home</h3></a>
+  <div class="parallax imageshadow" id="interestsParallax"> 
+    <div id="Interests" class="shadeOutline">
+      <h1>Interests<h1>
     </div>
 
-    <div class="col-2.col-4">  
-      <a href="aboutMe.html" class="anchorLink"><h3>About Me</h3></a>
-    </div>
 
-    <div class="col-2.col-4">
-       <a href="projects.html" class="anchorLink"><h3>Projects</h3></a>
-    </div>
-
-    <div class="col-2.col-4">
-       <a href="interests.html" class="anchorLink"><h3>My Interests</h3></a>
-    </div>
-
-    <div class="col-2.col-4">
-       <a href="workExperience.html" class="anchorLink"><h3>Work Experience</h3></a>
-    </div>
   </div>
 
+
+  <!-- Interests-->          
+    <div class="intro imageshadow parallax" id="interestsParallax1" style="margin-bottom: 0px; padding-top: 10vh;"> 
+      <div class="intro shadeOutline" id="introTitle">     
+       <h1 style="font-size:7.5vh"> A Few of my Hobbies:</h1>                     
+        <ul>
+          <a href="#basketball"><li><p><b><u>Basketball:</b></u> a great sport</p></li></a>
+          <a href="#cars"><li><p><b><u>Cars:</b></u> </p></li></a>
+          <a href="#music"><li><p><b><u>Music:</b></u> </p></li></a>
+        </ul>              
+      </div>
+    </div>   
+
+
+
+
+  <div class="basketball introTitle">
+    <div id="basketball" name="basketball">Basketball</div>    
+
+    <div class="parallax" id="parallax6">
+      <div class="shadeOutline row intro">
+        <h1> A Little Introduction </h1>
+        <p>
+        One of my hobbies is basketball; I not only enjoy playing the sport, but analyzing and disscussing topics relating to the NBA. I only started to like basketball around my first year college when I decided to give the sport one more try. I in particular, like two teams, the first being the Los Angeles Lakers. I started getting into basketball again and I liked their young core with D'Angelo Russell, Jordan Clarkson, and Julius Randle; it's pretty sad how none of them are on the team anymore. My favorite team however, must go with the Miami Heat. I vaguely remember seeing them face off against the Dallas Mavericks in the 2006 NBA finals; Dwayne Wade caught my attention immediately and I have stayed with that team ever since. The league has changed a lot over the year, and here is my personal top 10 list of players entering in the 2018-2019 season:
+        </p>
+      </div>
+    </div>
+
+    <div class="bball-slideshow-container" id="bballSlideShow"> 
+      <div class="parallax" id="parallax7">
+        <h1> My top 10 players entering the 2018-2019 NBA season: </h1>
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballJoelEmbiid.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">10. Joel Embiid</div>
+            <p> At the age of 24, Joel Embiid doesn't have as much nba experience as other players, yet he still dominates the court with his size. He is good in terms of not only offense, but also defense. In my opinion, he is already the best center at the league, playing for an up and coming team. 
+            </p>               
+          </div>            
+        </div>  
+
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballKyrieIrving.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">9. Kyrie Irving</div>
+            <p> He may think that the earth is flat, but his finishes around the rim suggest that he understands the concept of gravity. Once overshadowed by LeBron James, many thought that Irving would be unable to lead a team, but last year with the Celtics, he has put up a pretty good 24.4 points, 3.8 rebounds, and 5.1 assists. On top of that Kyrie is pretty clutch, having multiple game winning shots at the buzzer.
+            </p>               
+          </div>            
+        </div>    
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballRussellWestbrook.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">8. Russell Westbrook</div>
+            <p> Although I agree that Westbrook statpads in that he cares more about stats than winning, there is no doubt that Westbrook is a very talented player. He is extremely athlethic and can score almost at will. Even when the rest of the team fails to score, you can always count on Russell Westbrook to score. Even with all that effort in offense, Westbrook is still pretty average at defense, unlike the other guards on this list who struggle on defense.
+            </p>               
+          </div>            
+        </div>  
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballKawhiLeonard.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">7. Kawhi Leonard</div>
+            <p> Kawhi Leonard is one of the league's premier defenders, being able to defend almost anyone even though he is only league average in height(6'7"). His offensive game has been improving almost every year, and he has the ability to lead a championship team. I expect him to perform at or above the same level in Toronto this year.
+            </p>               
+          </div>            
+        </div> 
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballJamesHarden.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">6. James Harden</div>
+            <p> People criticize James Harden for not winning enough, but there is no doubt that he has a lot of talent. Harden is exceptional at offense, being able to score anywhere, as well as give out some pretty good passes for the assist. He is very unpredictable in offense, and is thus, hard to guard. The Rockets can praise James Harden for a big portion of their success for the past few years.
+            </p>               
+          </div>            
+        </div> 
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballGiannisAntetokounmpo.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">5. Giannis Antetokounmpo</div>
+            <p> A few years ago, no one could really see Giannis Anetetokounmpo as one of the league's best players. Fast forward a couple years and the only thing holding him back from being a top three player is his ability to shot the ball from long range. At this point, passing Antetokounmpo the ball is pretty much guaranteeing your team free two points. In some games, he secures the most points, rebounds, assists, steals, and blocks on his team.
+            </p>               
+          </div>            
+        </div> 
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballStephenCurry.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">4. Stephen Curry</div>
+            <p> Nothing much needs to be said here; you know Curry is good when the defender has to start defending him at the half court line. He is often regarded as the greatest shooter at all time, and can lead his team to a comeback from a 20 point defecit. No lead is safe with any team when Curry is on the court.
+            </p>               
+          </div>            
+        </div> 
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballAnthonyDavis.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">3. Anthony Davis</div>
+            <p> Similar to Embiid, Anthony Davis is a dominant player as he can use his size to score at will. Teams have a hard time guarding him, and at times, will need to put two defenders on him. He even has a decent 3-point shooting percentage and can score at distance. Not only that, but Davis will render almost any close-ranged offensive plays by the opposing team obsolete due to his defensive pressure.
+            </p>               
+          </div>            
+        </div> 
+
+         <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballKevinDurant.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">2. Kevin Durant</div>
+            <p> One of the greatest scorer's in history, Durant will score if you tell him to. He can score in a variety of ways from layups to mid-range to three-point shots. His height makes it easy for him to score over defenders; as a teammate, you can just pass him the ball as just relax as he somehow gets the ball to connect with the net. On the defensive end, his large wingspan makes it hard for anyone to get around him and he can easily block the ball if anyone tries to shoot over him.
+            </p>               
+          </div>            
+        </div> 
+
+        <div class="bballSlides fade row">            
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 bballSlidesImg">             
+            <img src="./img/bballLebronJames.jpg" style="width:100%">                            
+          </div>
+          <div class="text col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-xl-7 offset-lg-7 offset-md-7 bballSlidesText shadeOutline">
+            <div class="slideText">1. Lebron James</div>
+            <p> No surprise here, Lebron James can do it all; he's the only person in the league right now who is capable of leading a team all by himself. He is good at offense and defense. He makes everyone around him better. He can step up to coach his own team. There doesn't need to be much more of an explanation to justify why Lebron is the best player in the world.
+            </p>               
+          </div>            
+        </div> 
+
+
+        <a class="prevBball">&#10094;</a>
+        <a class="nextBball">&#10095;</a>           
+
+        <div class="bballSlideShowDots">
+          <span class="bballDot" onclick="bballSlide(1)">1</span>
+          <span class="bballDot" onclick="bballSlide(2)">2</span>
+          <span class="bballDot" onclick="bballSlide(3)">3</span>
+          <span class="bballDot" onclick="bballSlide(4)">4</span>
+          <span class="bballDot" onclick="bballSlide(5)">5</span>
+          <span class="bballDot" onclick="bballSlide(6)">6</span>
+          <span class="bballDot" onclick="bballSlide(7)">7</span>
+          <span class="bballDot" onclick="bballSlide(8)">8</span>
+          <span class="bballDot" onclick="bballSlide(9)">9</span>
+          <span class="bballDot bballDot2" onclick="bballSlide(10)">10</span>
+
+        </div>
+
+      </div>   
+
+    </div> <!--END SLIDESHOW -->
+    <div id="three-container"></div>
+
+    <div class="end_Basketball active">
+      <h2>"Conclusion"</h2>
+      <p>That was a bit about my interest in the sport. Ranking players is very controversial and can spark numerous debates; this list is just my opinion. Nevertheless I enjoy talking to others about the sport. In addition to players, I am interested in the statistics of the game, looking into advanced stats, and analyzing what the number actual means.      
+      </p>
+    </div>
+
+
+  </div>   <!-- END BASKETBALL -->
+
+  <div id="basketball_to_cars_gradient"></div>
+
+
+  <div id="cars">
+    <h1>Cars</h1>
+    <div class="parallax" id="parallax8">
+      <div class="shadeOutline row intro">
+        <h1> It's okay to dream sometimes...</h1>
+        <p>I appreciate the engineering that comes behind the creation of cars. The amount of work that goes into production. Every last detail. Some people view cars as pieces of metal stuck together, but I see a blend of art with engineering.          
+        </p>
+      </div>
+    </div>
+    <br>
+    <p> Here are a few cars I like...</p>
+
+    <div class="row justify-content-between">
+      <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+        <div class="card">
+          <div class="card-image">
+            <img src="./img/carAventador.jpg">              
+          </div>
+          <div class="card-content">
+            <p>Lamborghini Aventador</p>
+          </div>           
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+        <img src="./img/carLamborghiniLogo.png" style="width:100%"> 
+      </div>
+    </div>
+
+
+  </div> <!-- END CARS -->
+</div>
+        
+
+</div>
+
+
+
+</body>  
+
+  <!-- JS, Popper.js, and jQuery links provided by Bootstrap website -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>  
+
+  <!-- THREE JS --> 
+  <!-- <script type="text/javascript" src="js/three.js"></script> -->  
+ 
+  <script type="text/javascript" src="./js/Threejs/three.min.js"></script>
+  <script type="text/javascript" src="./js/Threejs/TweenMax.min.js"></script>
+  <script type="text/javascript" src="./js/Threejs/bas.js"></script>  
+  <script type="text/javascript" src="./js/Threejs/OrbitControls-2.js"></script> 
+  <script type="text/javascript" src="./js/Threejs/index.js"></script>
+
+  
+  <script type="text/javascript" src="js/interests.js"></script>  
+
+ <!--  <script type="text/javascript" src="js/three-animation.js"></script> -->
+  
+  <!--JavaScript at end of body for optimized loading (materialize)-->
+  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/rellax.js"></script>
   
 
-<script src="/bootstrap-4.0.0/js/tests/vendor/jquery-1.9.1.min.js"></script>
-<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
