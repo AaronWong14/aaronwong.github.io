@@ -548,7 +548,7 @@ nav ul a {
 #parallax5{
     height: 100vh;
     background-size: 100%;
-    background-image: url('../img/ucsdIntro.PNG');
+    background-image: url('../img/ucsdIntro.png');
 }
 
 #parallax6{
@@ -813,7 +813,6 @@ ul{
 .ucsdHeader{
   background-color: #FFB92D;
   color: white;
-
 }
 
 .ucsdDrop{
@@ -857,6 +856,42 @@ ul{
   margin-top: 5vh;   
   padding-bottom: 10vh; 
 }
+
+
+/*----------------------------------------------------
+    MemeMaster
+-----------------------------------------------------*/
+
+#ucsd_to_memeMaster_gradient{
+    background-image: linear-gradient(#FFB92D, #878f99);
+    height: 25vh;
+    margin-top: -5vh;
+    background-repeat: no-repeat;
+    cursor: context-menu;
+}
+
+.memeMasterHeader{
+    background-color: #878f99;
+    color: white;
+    -webkit-text-stroke: 2px black;
+
+}
+
+.memeMaster{
+    background-color: #878f99;
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+.memeMasterDrop{
+    cursor: pointer;
+    justify-content: right;
+    border-style: solid;
+    border-width: 0.5vh;
+    background-color: black;
+    margin-left: 2vw;
+}
+
 
 
 /*----------------------------------------------------
@@ -993,8 +1028,13 @@ ul{
     margin-bottom: 0px;
 }
 
+.carLogo{
+    margin-top: 10%;
+}
 
-
+.card{
+    border: white 5px solid;
+}
 
 /* ---------------------------------------------------
    	SLIDESHOWS
@@ -1476,6 +1516,76 @@ img {
   align-content: left;
 }
 
+.memeMaster-slideshow-container{  
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  margin-right: 5vw;
+  margin-left: 4vw;
+  margin-top: 3vh;
+}
+
+/* Next & previous buttons */
+.prevMemeMaster, .nextMemeMaster {
+  cursor: pointer;
+  position: absolute;
+  margin-top: 60%;
+  width: auto;
+  /*padding: 16px;
+  margin-top: -22px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.nextMemeMaster {
+  right: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+.prevMemeMaster {
+  left: -4vw;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevMemeMaster:hover, .nextMemeMaster:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.memeMasterDot {   
+    z-index: 100; 
+    cursor: pointer;
+    margin: 0 2px;
+    background: #fff;
+    color: white;
+    padding: 1vh .9vw;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: background-color 0.6s ease;
+}
+
+.memeMasterDot:active, .memeMasterDot:hover {  
+  background-color: #000;
+  cursor: pointer;
+}
+
+.memeMasterSlideShowDots{  
+  z-index: 100;
+  margin-left: -0.5vw;
+  margin-top: -15vh;
+}
+
+.memeMasterSlideShowDots .active{
+  background-color: #000;
+  text-align:center;
+  align-content: left;
+}
+
 .bball-slideshow-container{
   position: relative;
   margin-top: 15vw;
@@ -1584,6 +1694,13 @@ img {
 /* ---------------------------------------------------
     Interests Page
 ----------------------------------------------------- */
+
+#interests h1{
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+}
 
 #interestsParallax{
     height: 100vh;
